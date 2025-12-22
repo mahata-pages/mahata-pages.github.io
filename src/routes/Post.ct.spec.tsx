@@ -33,7 +33,7 @@ test('handles markdown with special characters and incomplete syntax', async ({ 
   
   // Should render without crashing, even with incomplete link syntax
   await expect(component).toBeVisible()
-  // Note: remark strips the <Characters> part as it looks like an HTML tag
+  // remark-html sanitizes HTML-like tags; <Characters> is stripped for security
   await expect(component.getByRole('heading', { name: /Special/ })).toBeVisible()
   // remark should handle incomplete link gracefully by rendering it as plain text
   await expect(component).toContainText('Incomplete link')
@@ -52,7 +52,7 @@ test('handles empty markdown content', async ({ mount, page }) => {
   const component = await mountAtPath(mount, '/posts/empty')
   
   // Should render article element even with empty content
-  // Empty article won't be "visible" but should be in the DOM
+  // Article element exists in DOM but has no visible content
   const articleCount = await page.locator('article').count()
   expect(articleCount).toBe(1)
   // Verify it doesn't show "Post not found" error
