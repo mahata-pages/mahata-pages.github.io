@@ -5,13 +5,14 @@ import html from 'remark-html'
 
 const posts = Object.fromEntries(
   Object.entries(
-    import.meta.glob<string>('../../posts/*.md', {
-      as: 'raw',
+    import.meta.glob('../../posts/*.md', {
+      query: '?raw',
+      import: 'default',
       eager: true,
     }),
   ).map(([path, content]) => {
     const slug = path.split('/').pop()?.replace(/\.md$/, '') ?? ''
-    return [slug, content]
+    return [slug, content as string]
   }),
 )
 
