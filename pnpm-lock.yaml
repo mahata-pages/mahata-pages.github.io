@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@acab/reset.css':
+        specifier: ^0.11.0
+        version: 0.11.0
       react:
         specifier: ^19.2.0
         version: 19.2.3
@@ -71,6 +74,9 @@ importers:
         version: 7.3.0(@types/node@24.10.4)
 
 packages:
+
+  '@acab/reset.css@0.11.0':
+    resolution: {integrity: sha512-m9p/vUDxzXd8u0EYwHNKZOmjEY4DQHPq7H4/7EbZuxzTQ/KtVtc1sfhwoOBBpG3QtTNIL9FBX5wQ8xhrjfimog==}
 
   '@babel/code-frame@7.27.1':
     resolution: {integrity: sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg==}
@@ -1632,6 +1638,8 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
 
 snapshots:
+
+  '@acab/reset.css@0.11.0': {}
 
   '@babel/code-frame@7.27.1':
     dependencies:
