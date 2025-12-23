@@ -3,25 +3,29 @@ import type { ComponentFixtures } from '@playwright/experimental-ct-react'
 import { MemoryRouter, Routes, Route } from 'react-router-dom'
 import Post from './Post'
 
-const mountAtPath = async (mount: ComponentFixtures['mount'], path: string) => {
+const mountAtPath = async (
+  mount: ComponentFixtures['mount'],
+  path: string,
+  baseDir: 'posts' | 'posts-test' = 'posts',
+) => {
   return await mount(
     <MemoryRouter initialEntries={[path]}>
       <Routes>
-        <Route path="/posts/:slug" element={<Post />} />
+        <Route path="/posts/:slug" element={<Post baseDir={baseDir} />} />
       </Routes>
     </MemoryRouter>,
   )
 }
 
 test('renders existing markdown post', async ({ mount }) => {
-  const component = await mountAtPath(mount, '/posts/yo')
+  const component = await mountAtPath(mount, '/posts/yo', 'posts')
 
   await expect(component.getByRole('heading', { name: 'Hey' })).toBeVisible()
   await expect(component).toContainText('Yo.')
 })
 
 test('shows not found for missing post', async ({ mount }) => {
-  const component = await mountAtPath(mount, '/posts/missing')
+  const component = await mountAtPath(mount, '/posts/missing', 'posts')
 
   await expect(component).toContainText('Post not found.')
   const backLink = component.getByRole('link', { name: 'Back home' })
@@ -29,7 +33,7 @@ test('shows not found for missing post', async ({ mount }) => {
 })
 
 test('handles markdown with special characters and incomplete syntax', async ({ mount }) => {
-  const component = await mountAtPath(mount, '/posts/special-chars')
+  const component = await mountAtPath(mount, '/posts/special-chars', 'posts-test')
   
   // Should render without crashing, even with incomplete link syntax
   await expect(component).toBeVisible()
@@ -40,7 +44,7 @@ test('handles markdown with special characters and incomplete syntax', async ({ 
 })
 
 test('handles markdown with unbalanced brackets', async ({ mount }) => {
-  const component = await mountAtPath(mount, '/posts/unbalanced')
+  const component = await mountAtPath(mount, '/posts/unbalanced', 'posts-test')
   
   // Should render without crashing, even if markdown has unbalanced syntax
   await expect(component).toBeVisible()
@@ -49,7 +53,7 @@ test('handles markdown with unbalanced brackets', async ({ mount }) => {
 })
 
 test('handles empty markdown content', async ({ mount, page }) => {
-  const component = await mountAtPath(mount, '/posts/empty')
+  const component = await mountAtPath(mount, '/posts/empty', 'posts-test')
   
   // Should render article element even with empty content
   // Article element exists in DOM but has no visible content
@@ -60,7 +64,7 @@ test('handles empty markdown content', async ({ mount, page }) => {
 })
 
 test('handles markdown with potentially malicious HTML content', async ({ mount }) => {
-  const component = await mountAtPath(mount, '/posts/malicious')
+  const component = await mountAtPath(mount, '/posts/malicious', 'posts-test')
   
   await expect(component).toBeVisible()
   // The heading should be visible, proving markdown was processed

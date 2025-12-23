@@ -3,17 +3,31 @@ import { Link, useParams } from 'react-router-dom'
 import { remark } from 'remark'
 import html from 'remark-html'
 
-const posts = import.meta.glob('../../posts/*.md', {
+type PostProps = Readonly<{
+  baseDir?: 'posts' | 'posts-test'
+}>
+
+const prodPosts = import.meta.glob('../../posts/*.md', {
   query: '?raw',
   import: 'default',
 })
 
-export default function Post() {
+const testPosts = import.meta.glob('../../posts-test/*.md', {
+  query: '?raw',
+  import: 'default',
+})
+
+export default function Post({ baseDir = 'posts' }: PostProps) {
   const { slug = '' } = useParams()
   const [markdown, setMarkdown] = useState<string | null | undefined>(undefined)
 
   useEffect(() => {
-    const postPath = `../../posts/${slug}.md`
+    const posts = baseDir === 'posts-test' ? testPosts : prodPosts
+    const postPath =
+      baseDir === 'posts-test'
+        ? `../../posts-test/${slug}.md`
+        : `../../posts/${slug}.md`
+
     const loadPost = posts[postPath]
 
     let isCancelled = false
@@ -40,7 +54,7 @@ export default function Post() {
     return () => {
       isCancelled = true
     }
-  }, [slug])
+  }, [baseDir, slug])
 
   const renderedHtml = useMemo(() => {
     if (markdown === undefined || markdown === null) return ''
