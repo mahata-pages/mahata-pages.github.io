@@ -64,16 +64,21 @@ export default function Post() {
   }, [slug])
 
   const renderedHtml = useMemo(() => {
-    if (!markdown) return ''
-    const processed = remark().use(html).processSync(markdown)
-    return String(processed)
+    if (markdown === undefined) return ''
+    try {
+      const processed = remark().use(html).processSync(markdown)
+      return String(processed)
+    } catch (error) {
+      console.error('Error processing markdown:', error)
+      return '<p>Error rendering post content.</p>'
+    }
   }, [markdown])
 
   if (loading) {
     return <div>Loading...</div>
   }
 
-  if (notFound || !markdown) {
+  if (markdown === undefined) {
     return (
       <div>
         <p>Post not found.</p>
