@@ -11,7 +11,6 @@ const posts = import.meta.glob('../../posts/*.md', {
 export default function Post() {
   const { slug = '' } = useParams()
   const [markdown, setMarkdown] = useState<string | null | undefined>(undefined)
-  const [loadedSlug, setLoadedSlug] = useState('')
 
   useEffect(() => {
     const postPath = `../../posts/${slug}.md`
@@ -19,24 +18,24 @@ export default function Post() {
 
     let isCancelled = false
 
-    const loadContent = async () => {
-      if (!loadPost) {
-        return null
-      }
-      try {
-        return await loadPost() as string
-      } catch (error) {
+    Promise.resolve()
+      .then(() => {
+        if (!loadPost) {
+          return null
+        }
+        return loadPost()
+      })
+      .then((content) => {
+        if (!isCancelled) {
+          setMarkdown(content as string | null)
+        }
+      })
+      .catch((error) => {
         console.error('Error loading post:', error)
-        return null
-      }
-    }
-
-    loadContent().then((content) => {
-      if (!isCancelled) {
-        setMarkdown(content)
-        setLoadedSlug(slug)
-      }
-    })
+        if (!isCancelled) {
+          setMarkdown(null)
+        }
+      })
 
     return () => {
       isCancelled = true
@@ -54,10 +53,7 @@ export default function Post() {
     }
   }, [markdown])
 
-  // Derive loading state from whether we've loaded the current slug
-  const isLoading = loadedSlug !== slug
-
-  if (isLoading) {
+  if (markdown === undefined) {
     return <p>Loading...</p>
   }
 
