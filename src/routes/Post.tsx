@@ -54,7 +54,11 @@ export default function Post() {
   }, [markdown])
 
   if (markdown === undefined) {
-    return <p>Loading...</p>
+    return (
+      <div role="status" aria-live="polite">
+        <p>Loading...</p>
+      </div>
+    )
   }
 
   if (markdown === null) {
