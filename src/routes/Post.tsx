@@ -64,7 +64,7 @@ export default function Post() {
   }, [slug])
 
   const renderedHtml = useMemo(() => {
-    if (markdown === undefined) return ''
+    if (markdown === null) return ''
     try {
       const processed = remark().use(html).processSync(markdown)
       return String(processed)
