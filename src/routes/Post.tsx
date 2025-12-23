@@ -78,7 +78,7 @@ export default function Post() {
     return <div>Loading...</div>
   }
 
-  if (markdown === undefined) {
+  if (notFound) {
     return (
       <div>
         <p>Post not found.</p>
