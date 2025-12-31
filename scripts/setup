@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+cd "$(dirname "$0")/.."
+
+pnpm install
+pnpm install -g @github/copilot
