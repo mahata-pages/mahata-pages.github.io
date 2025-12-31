@@ -3,4 +3,4 @@
 cd "$(dirname "$0")/.."
 
 pnpm install
-pnpm install -g @github/copilot
+pnpm add -g @github/copilot
