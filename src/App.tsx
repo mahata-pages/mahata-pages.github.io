@@ -3,11 +3,7 @@ import { Header } from '@/Header'
 import { PostList } from '@/components/PostList'
 import type { PostMetadata } from '@/utils/posts'
 import { extractPostsMetadata } from '@/utils/posts'
-
-const postsModules = import.meta.glob('../../posts/*.md', {
-  query: '?raw',
-  import: 'default',
-})
+import { postsModules } from '@/utils/postsModules'
 
 function App() {
   const [posts, setPosts] = useState<PostMetadata[]>([])
