@@ -1,15 +1,10 @@
-// This file manually imports all posts to ensure they're available in tests
-import post1 from '../../posts/2022-11-30-yet-another-blog-migration.md?raw'
-import post2 from '../../posts/2022-12-01-startup-like-big-tech.md?raw'
-import post3 from '../../posts/yo-with-front-matter.md?raw'
-import post4 from '../../posts/yo.md?raw'
+// Automatically import all markdown files as raw strings (front matter parsing expects raw content)
+const posts = import.meta.glob('../../posts/*.md', {
+  query: '?raw',
+  import: 'default',
+  eager: true,
+}) as Record<string, string>
 
-export const postsModules = {
-  '../../posts/2022-11-30-yet-another-blog-migration.md': () =>
-    Promise.resolve({ default: post1 }),
-  '../../posts/2022-12-01-startup-like-big-tech.md': () =>
-    Promise.resolve({ default: post2 }),
-  '../../posts/yo-with-front-matter.md': () =>
-    Promise.resolve({ default: post3 }),
-  '../../posts/yo.md': () => Promise.resolve({ default: post4 }),
-}
+export const postsModules: Record<string, () => Promise<{ default: string }>> = Object.fromEntries(
+  Object.entries(posts).map(([key, value]) => [key, () => Promise.resolve({ default: value })]),
+)
