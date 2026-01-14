@@ -17,7 +17,7 @@ export async function extractPostsMetadata(
       const content = module.default
 
       // Extract front matter YAML block
-      const frontMatterRegex = /^---\n([\s\S]*?)\n---/
+      const frontMatterRegex = /^---\r?\n([\s\S]*?)\r?\n---/
       const frontMatterMatch = frontMatterRegex.exec(content)
       if (!frontMatterMatch) continue
 
