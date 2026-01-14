@@ -1,9 +1,9 @@
 import { Component, type ReactNode, type ErrorInfo } from 'react'
 
-type ErrorBoundaryProps = {
+type ErrorBoundaryProps = Readonly<{
   children: ReactNode
   fallback?: ReactNode
-}
+}>
 
 type ErrorBoundaryState = {
   hasError: boolean
