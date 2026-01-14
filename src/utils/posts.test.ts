@@ -546,14 +546,16 @@ Content`,
       
       // Create 100 test posts
       for (let i = 0; i < 100; i++) {
+        const postNumber = i
+        const dayOfMonth = String((i % 28) + 1).padStart(2, '0')
         modules[`../../posts/post-${i}.md`] = () =>
           Promise.resolve({
             default: `---
-title: 'Post ${i}'
-date: '2024-01-${String(i % 28 + 1).padStart(2, '0')}'
+title: Post ${postNumber}
+date: 2024-01-${dayOfMonth}
 ---
 
-Content ${i}`,
+Content for post ${postNumber}`,
           })
       }
 
