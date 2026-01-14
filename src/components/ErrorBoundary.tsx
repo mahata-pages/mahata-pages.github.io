@@ -24,7 +24,7 @@ export class ErrorBoundary extends Component<
   }
 
   componentDidCatch(error: Error, errorInfo: { componentStack: string }) {
-    console.error('Error loading posts:', error, errorInfo)
+    console.error('Error:', error, errorInfo)
   }
 
   render() {
@@ -32,7 +32,7 @@ export class ErrorBoundary extends Component<
       if (this.props.fallback) {
         return this.props.fallback
       }
-      return <p>Error loading posts. Please try again later.</p>
+      return <p>Something went wrong. Please try again later.</p>
     }
 
     return this.props.children
