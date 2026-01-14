@@ -26,13 +26,13 @@ Post content here.`,
       })
     })
 
-    it('should parse front matter without quotes', async () => {
+    it('should parse front matter with unquoted values', async () => {
       const modules = {
         '../../posts/simple.md': () =>
           Promise.resolve({
             default: `---
 title: Simple Title
-date: 2024-01-15
+date: '2024-01-15'
 ---
 
 Content`,
@@ -546,16 +546,15 @@ Content`,
       
       // Create 100 test posts
       for (let i = 0; i < 100; i++) {
-        const postNumber = i
         const dayOfMonth = String((i % 28) + 1).padStart(2, '0')
         modules[`../../posts/post-${i}.md`] = () =>
           Promise.resolve({
             default: `---
-title: Post ${postNumber}
+title: Post ${i}
 date: 2024-01-${dayOfMonth}
 ---
 
-Content for post ${postNumber}`,
+Content for post ${i}`,
           })
       }
 
