@@ -1,4 +1,4 @@
-import { Component, type ReactNode } from 'react'
+import { Component, type ReactNode, type ErrorInfo } from 'react'
 
 type ErrorBoundaryProps = {
   children: ReactNode
@@ -23,7 +23,7 @@ export class ErrorBoundary extends Component<
     return { hasError: true, error }
   }
 
-  componentDidCatch(error: Error, errorInfo: { componentStack: string }) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('Error:', error, errorInfo)
   }
 
