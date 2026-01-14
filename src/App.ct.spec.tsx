@@ -14,12 +14,12 @@ const mountApp = async (mount: ComponentFixtures['mount']) => {
 test('should render heading', async ({ mount }) => {
   const component = await mountApp(mount)
 
-  await expect(component.getByRole('heading', { name: 'Vite + React' })).toBeVisible()
+  await expect(component.getByRole('heading', { name: 'Posts' })).toBeVisible()
 })
 
-test('should render health link with correct href', async ({ mount }) => {
+test('should render post list', async ({ mount }) => {
   const component = await mountApp(mount)
 
-  const link = component.getByRole('link', { name: '/health' })
-  await expect(link).toHaveAttribute('href', '/health')
+  // Wait for posts to load
+  await expect(component.locator('.post-list')).toBeVisible()
 })
