@@ -1,19 +1,12 @@
 import { describe, it, expect, vi } from 'vitest'
 import { extractPostsMetadata } from './posts'
+import { createFixtureModule, loadFixture } from './test-helpers'
 
 describe('extractPostsMetadata', () => {
   describe('correct parsing of front matter', () => {
     it('should correctly parse valid front matter with title and date', async () => {
       const modules = {
-        '../../posts/test-post.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Test Post'
-date: '2024-01-15'
----
-
-Post content here.`,
-          }),
+        '../../posts/test-post.md': createFixtureModule('valid-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -28,15 +21,7 @@ Post content here.`,
 
     it('should parse front matter with unquoted values', async () => {
       const modules = {
-        '../../posts/simple.md': () =>
-          Promise.resolve({
-            default: `---
-title: Simple Title
-date: '2024-01-15'
----
-
-Content`,
-          }),
+        '../../posts/simple.md': createFixtureModule('simple-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -48,15 +33,7 @@ Content`,
 
     it('should handle front matter with special characters', async () => {
       const modules = {
-        '../../posts/special.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Title with "quotes" and symbols: & < >'
-date: '2024-01-15'
----
-
-Content`,
-          }),
+        '../../posts/special.md': createFixtureModule('special-chars-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -67,33 +44,20 @@ Content`,
 
     it('should handle front matter with unicode characters', async () => {
       const modules = {
-        '../../posts/unicode.md': () =>
-          Promise.resolve({
-            default: `---
-title: '大企業内の小規模チームでのお仕事'
-date: '2024-01-15'
----
-
-Content`,
-          }),
+        '../../posts/unicode.md': createFixtureModule('unicode-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
 
       expect(result).toHaveLength(1)
-      expect(result[0].title).toBe('大企業内の小規模チームでのお仕事')
+      expect(result[0].title).toBe('International Title with Ümläuts and Émojis')
     })
   })
 
   describe('handling of missing front matter', () => {
     it('should skip posts without front matter', async () => {
       const modules = {
-        '../../posts/no-front-matter.md': () =>
-          Promise.resolve({
-            default: `# Just a heading
-
-Content without front matter.`,
-          }),
+        '../../posts/no-front-matter.md': createFixtureModule('no-front-matter.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -103,14 +67,7 @@ Content without front matter.`,
 
     it('should skip posts with incomplete front matter (missing closing ---)', async () => {
       const modules = {
-        '../../posts/incomplete.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Incomplete'
-date: '2024-01-15'
-
-Content without closing delimiter`,
-          }),
+        '../../posts/incomplete.md': createFixtureModule('incomplete-front-matter.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -120,10 +77,7 @@ Content without closing delimiter`,
 
     it('should skip posts with empty content', async () => {
       const modules = {
-        '../../posts/empty.md': () =>
-          Promise.resolve({
-            default: '',
-          }),
+        '../../posts/empty.md': createFixtureModule('empty.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -133,14 +87,7 @@ Content without closing delimiter`,
 
     it('should skip posts missing title', async () => {
       const modules = {
-        '../../posts/no-title.md': () =>
-          Promise.resolve({
-            default: `---
-date: '2024-01-15'
----
-
-Content`,
-          }),
+        '../../posts/no-title.md': createFixtureModule('no-title.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -150,14 +97,7 @@ Content`,
 
     it('should skip posts missing date', async () => {
       const modules = {
-        '../../posts/no-date.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'No Date Post'
----
-
-Content`,
-          }),
+        '../../posts/no-date.md': createFixtureModule('no-date.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -171,16 +111,7 @@ Content`,
       const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
 
       const modules = {
-        '../../posts/bad-yaml.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Bad YAML
-date: '2024-01-15'
-invalid: [unclosed bracket
----
-
-Content`,
-          }),
+        '../../posts/bad-yaml.md': createFixtureModule('bad-yaml.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -198,15 +129,7 @@ Content`,
       const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
 
       const modules = {
-        '../../posts/invalid.md': () =>
-          Promise.resolve({
-            default: `---
-: invalid
-:: double colons
----
-
-Content`,
-          }),
+        '../../posts/invalid.md': createFixtureModule('invalid-yaml.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -221,15 +144,7 @@ Content`,
   describe('slug extraction from file paths', () => {
     it('should extract slug from standard path', async () => {
       const modules = {
-        '../../posts/my-blog-post.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'My Blog Post'
-date: '2024-01-15'
----
-
-Content`,
-          }),
+        '../../posts/my-blog-post.md': createFixtureModule('standard-path-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -239,15 +154,7 @@ Content`,
 
     it('should extract slug from path with date prefix', async () => {
       const modules = {
-        '../../posts/2024-01-15-new-post.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'New Post'
-date: '2024-01-15'
----
-
-Content`,
-          }),
+        '../../posts/2024-01-15-new-post.md': createFixtureModule('2024-01-15-new-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -257,24 +164,8 @@ Content`,
 
     it('should handle different path depths', async () => {
       const modules = {
-        '../posts/simple.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Simple'
-date: '2024-01-15'
----
-
-Content`,
-          }),
-        '/absolute/path/posts/absolute.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Absolute'
-date: '2024-01-14'
----
-
-Content`,
-          }),
+        '../posts/simple.md': createFixtureModule('simple-post.md'),
+        '/absolute/path/posts/absolute.md': createFixtureModule('valid-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -288,12 +179,7 @@ Content`,
       const modules = {
         '../../posts/': () =>
           Promise.resolve({
-            default: `---
-title: 'No File'
-date: '2024-01-15'
----
-
-Content`,
+            default: loadFixture('valid-post.md'),
           }),
       }
 
@@ -306,33 +192,9 @@ Content`,
   describe('date-based sorting (newest first)', () => {
     it('should sort posts by date with newest first', async () => {
       const modules = {
-        '../../posts/old.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Old Post'
-date: '2022-01-01'
----
-
-Content`,
-          }),
-        '../../posts/new.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'New Post'
-date: '2024-12-31'
----
-
-Content`,
-          }),
-        '../../posts/middle.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Middle Post'
-date: '2023-06-15'
----
-
-Content`,
-          }),
+        '../../posts/old.md': createFixtureModule('old-post.md'),
+        '../../posts/new.md': createFixtureModule('new-post.md'),
+        '../../posts/middle.md': createFixtureModule('middle-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -345,24 +207,8 @@ Content`,
 
     it('should handle posts with same date', async () => {
       const modules = {
-        '../../posts/first.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'First'
-date: '2024-01-15'
----
-
-Content`,
-          }),
-        '../../posts/second.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Second'
-date: '2024-01-15'
----
-
-Content`,
-          }),
+        '../../posts/first.md': createFixtureModule('valid-post.md'),
+        '../../posts/second.md': createFixtureModule('simple-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -375,24 +221,8 @@ Content`,
 
     it('should handle different date formats correctly', async () => {
       const modules = {
-        '../../posts/iso.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'ISO Date'
-date: '2024-01-15T10:00:00Z'
----
-
-Content`,
-          }),
-        '../../posts/simple.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Simple Date'
-date: '2024-01-14'
----
-
-Content`,
-          }),
+        '../../posts/iso.md': createFixtureModule('iso-date-post.md'),
+        '../../posts/simple.md': createFixtureModule('simple-date-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -408,33 +238,9 @@ Content`,
       const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
 
       const modules = {
-        '../../posts/valid.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Valid Post'
-date: '2024-01-15'
----
-
-Content`,
-          }),
-        '../../posts/invalid.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Invalid
-date: unquoted string with : colon
----
-
-Content`,
-          }),
-        '../../posts/another-valid.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Another Valid'
-date: '2024-01-14'
----
-
-Content`,
-          }),
+        '../../posts/valid.md': createFixtureModule('valid-post-1.md'),
+        '../../posts/invalid.md': createFixtureModule('invalid-post.md'),
+        '../../posts/another-valid.md': createFixtureModule('valid-post-2.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -452,21 +258,13 @@ Content`,
 
       const modules = {
         '../../posts/error.md': () => Promise.reject(new Error('Failed to load module')),
-        '../../posts/valid.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Valid Post'
-date: '2024-01-15'
----
-
-Content`,
-          }),
+        '../../posts/valid.md': createFixtureModule('valid-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
 
       expect(result).toHaveLength(1)
-      expect(result[0].title).toBe('Valid Post')
+      expect(result[0].title).toBe('Test Post')
       expect(consoleErrorSpy).toHaveBeenCalledWith(
         expect.stringContaining('Failed to parse post at'),
         expect.anything()
@@ -485,10 +283,7 @@ Content`,
 
     it('should handle front matter with Windows line endings (CRLF)', async () => {
       const modules = {
-        '../../posts/windows.md': () =>
-          Promise.resolve({
-            default: `---\r\ntitle: 'Windows Post'\r\ndate: '2024-01-15'\r\n---\r\n\r\nContent`,
-          }),
+        '../../posts/windows.md': createFixtureModule('windows-crlf.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -499,15 +294,7 @@ Content`,
 
     it('should handle front matter with extra whitespace', async () => {
       const modules = {
-        '../../posts/whitespace.md': () =>
-          Promise.resolve({
-            default: `---
-title:    'Whitespace Post'   
-date:     '2024-01-15'    
----
-
-Content`,
-          }),
+        '../../posts/whitespace.md': createFixtureModule('whitespace-post.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -518,17 +305,7 @@ Content`,
 
     it('should handle front matter with additional fields', async () => {
       const modules = {
-        '../../posts/extra-fields.md': () =>
-          Promise.resolve({
-            default: `---
-title: 'Extra Fields'
-date: '2024-01-15'
-author: 'John Doe'
-tags: ['test', 'demo']
----
-
-Content`,
-          }),
+        '../../posts/extra-fields.md': createFixtureModule('extra-fields.md'),
       }
 
       const result = await extractPostsMetadata(modules)
@@ -544,7 +321,7 @@ Content`,
     it('should handle multiple posts efficiently', async () => {
       const modules: Record<string, () => Promise<{ default: string }>> = {}
       
-      // Create 100 test posts
+      // Create 100 test posts dynamically (not using fixtures for performance test)
       for (let i = 0; i < 100; i++) {
         const dayOfMonth = String((i % 28) + 1).padStart(2, '0')
         modules[`../../posts/post-${i}.md`] = () =>
