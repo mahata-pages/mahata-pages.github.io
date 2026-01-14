@@ -10,4 +10,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     }
   },
+  test: {
+    globals: true,
+    environment: 'node',
+    exclude: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/playwright/**',
+      '**/*.ct.spec.{ts,tsx}',
+      '**/*.e2e.spec.{ts,tsx}',
+    ],
+  },
 })
