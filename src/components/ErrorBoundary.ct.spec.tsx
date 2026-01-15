@@ -3,7 +3,7 @@ import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { useState } from 'react'
 
 // Component that throws an error when shouldThrow is true
-function ThrowError({ shouldThrow }: { shouldThrow: boolean }) {
+function ThrowError({ shouldThrow }: Readonly<{ shouldThrow: boolean }>) {
   if (shouldThrow) {
     throw new Error('Test error')
   }
@@ -49,14 +49,6 @@ test('should render children when no error occurs', async ({ mount }) => {
 })
 
 test('should display default fallback message when an error is caught', async ({ mount, page }) => {
-  // Listen for console.error calls
-  const consoleErrors: string[] = []
-  page.on('console', (msg) => {
-    if (msg.type() === 'error') {
-      consoleErrors.push(msg.text())
-    }
-  })
-
   const component = await mount(<ErrorTrigger />)
 
   // Initially, no error should be displayed
