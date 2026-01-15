@@ -1,6 +1,7 @@
 import { use, Suspense, useMemo } from 'react'
 import { Header } from '@/Header'
 import { PostList } from '@/components/PostList'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { extractPostsMetadata } from '@/utils/posts'
 import { postsModules } from '@/utils/postsModules'
 
@@ -16,9 +17,11 @@ function App() {
       <Header />
       <main>
         <h1>Posts</h1>
-        <Suspense fallback={<p>Loading posts...</p>}>
-          <PostsContent />
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<p>Loading posts...</p>}>
+            <PostsContent />
+          </Suspense>
+        </ErrorBoundary>
       </main>
     </>
   )
