@@ -104,15 +104,15 @@ test('should preserve existing query parameters', async ({ mount }) => {
   expect(href).toContain('filter=test')
 })
 
-test('should render pagination with correct CSS classes', async ({ mount }) => {
+test('should render pagination with correct styling', async ({ mount }) => {
   const component = await mountPagination(mount, 2, 4)
 
-  // Check elements with specific classes render correctly
-  await expect(component.locator('.pagination-list')).toBeVisible()
-  await expect(component.locator('.pagination-prev')).toBeVisible()
-  await expect(component.locator('.pagination-next')).toBeVisible()
-  await expect(component.locator('.pagination-current')).toBeVisible()
-  await expect(component.locator('.pagination-current')).toHaveText('2')
+  // Check all pagination elements render correctly
+  await expect(component.getByRole('link', { name: '← Previous' })).toBeVisible()
+  await expect(component.getByRole('link', { name: 'Next →' })).toBeVisible()
+  const currentPageSpan = component.locator('[aria-current="page"]')
+  await expect(currentPageSpan).toBeVisible()
+  await expect(currentPageSpan).toHaveText('2')
 })
 
 test('should render only Next link on first page of many', async ({ mount }) => {
