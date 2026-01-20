@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { PostMetadata } from '@/utils/posts'
-import './PostList.css'
+import styles from './PostList.module.css'
 
 type PostListProps = Readonly<{
   posts: PostMetadata[]
@@ -12,13 +12,13 @@ export function PostList({ posts }: PostListProps) {
   }
 
   return (
-    <ul className="post-list">
+    <ul className={styles.postList}>
       {posts.map((post) => (
-        <li key={post.slug} className="post-list-item">
-          <Link to={`/posts/${post.slug}`} className="post-link">
+        <li key={post.slug} className={styles.postListItem}>
+          <Link to={`/posts/${post.slug}`} className={styles.postLink}>
             {post.title}
           </Link>
-          <time className="post-date" dateTime={post.date}>
+          <time className={styles.postDate} dateTime={post.date}>
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',

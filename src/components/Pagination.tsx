@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import './Pagination.css'
+import styles from './Pagination.module.css'
 
 type PaginationProps = Readonly<{
   currentPage: number
@@ -20,24 +20,24 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
   }
 
   return (
-    <nav className="pagination" aria-label="Pagination Navigation">
-      <ul className="pagination-list">
+    <nav className={styles.pagination} aria-label="Pagination Navigation">
+      <ul className={styles.paginationList}>
         {currentPage > 1 && (
-          <li className="pagination-item">
-            <Link to={getPageLink(currentPage - 1)} className="pagination-link pagination-prev">
+          <li className={styles.paginationItem}>
+            <Link to={getPageLink(currentPage - 1)} className={`${styles.paginationLink} ${styles.paginationPrev}`}>
               ← Previous
             </Link>
           </li>
         )}
 
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-          <li key={page} className="pagination-item">
+          <li key={page} className={styles.paginationItem}>
             {page === currentPage ? (
-              <span className="pagination-link pagination-current" aria-current="page">
+              <span className={`${styles.paginationLink} ${styles.paginationCurrent}`} aria-current="page">
                 {page}
               </span>
             ) : (
-              <Link to={getPageLink(page)} className="pagination-link">
+              <Link to={getPageLink(page)} className={styles.paginationLink}>
                 {page}
               </Link>
             )}
@@ -45,8 +45,8 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
         ))}
 
         {currentPage < totalPages && (
-          <li className="pagination-item">
-            <Link to={getPageLink(currentPage + 1)} className="pagination-link pagination-next">
+          <li className={styles.paginationItem}>
+            <Link to={getPageLink(currentPage + 1)} className={`${styles.paginationLink} ${styles.paginationNext}`}>
               Next →
             </Link>
           </li>

@@ -20,6 +20,6 @@ test('should render heading', async ({ mount }) => {
 test('should render post list', async ({ mount }) => {
   const component = await mountApp(mount)
 
-  // Wait for posts to load
-  await expect(component.locator('.post-list')).toBeVisible()
+  // Wait for posts to load - find the list by looking for the first post link
+  await expect(component.getByRole('link').filter({ hasText: /.+/ }).first()).toBeVisible()
 })
