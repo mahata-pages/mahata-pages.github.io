@@ -12,13 +12,13 @@ export function PostList({ posts }: PostListProps) {
   }
 
   return (
-    <ul className={styles['post-list']}>
+    <ul className={styles.postList}>
       {posts.map((post) => (
-        <li key={post.slug} className={styles['post-list-item']}>
-          <Link to={`/posts/${post.slug}`} className={styles['post-link']}>
+        <li key={post.slug} className={styles.postListItem}>
+          <Link to={`/posts/${post.slug}`} className={styles.postLink}>
             {post.title}
           </Link>
-          <time className={styles['post-date']} dateTime={post.date}>
+          <time className={styles.postDate} dateTime={post.date}>
             {new Date(post.date).toLocaleDateString('en-US', {
               year: 'numeric',
               month: 'long',

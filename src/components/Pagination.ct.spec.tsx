@@ -55,7 +55,7 @@ test('should highlight current page with aria-current', async ({ mount }) => {
   const currentPage = component.locator('[aria-current="page"]')
   await expect(currentPage).toBeVisible()
   await expect(currentPage).toHaveText('3')
-  await expect(currentPage).toHaveClass(/pagination-current/)
+  await expect(currentPage).toHaveClass(/paginationCurrent/)
 })
 
 test('should not show Previous link on first page', async ({ mount }) => {

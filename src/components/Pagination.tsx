@@ -21,23 +21,23 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
 
   return (
     <nav className={styles.pagination} aria-label="Pagination Navigation">
-      <ul className={styles['pagination-list']}>
+      <ul className={styles.paginationList}>
         {currentPage > 1 && (
-          <li className={styles['pagination-item']}>
-            <Link to={getPageLink(currentPage - 1)} className={`${styles['pagination-link']} ${styles['pagination-prev']}`}>
+          <li className={styles.paginationItem}>
+            <Link to={getPageLink(currentPage - 1)} className={`${styles.paginationLink} ${styles.paginationPrev}`}>
               ← Previous
             </Link>
           </li>
         )}
 
         {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-          <li key={page} className={styles['pagination-item']}>
+          <li key={page} className={styles.paginationItem}>
             {page === currentPage ? (
-              <span className={`${styles['pagination-link']} ${styles['pagination-current']}`} aria-current="page">
+              <span className={`${styles.paginationLink} ${styles.paginationCurrent}`} aria-current="page">
                 {page}
               </span>
             ) : (
-              <Link to={getPageLink(page)} className={styles['pagination-link']}>
+              <Link to={getPageLink(page)} className={styles.paginationLink}>
                 {page}
               </Link>
             )}
@@ -45,8 +45,8 @@ export function Pagination({ currentPage, totalPages }: PaginationProps) {
         ))}
 
         {currentPage < totalPages && (
-          <li className={styles['pagination-item']}>
-            <Link to={getPageLink(currentPage + 1)} className={`${styles['pagination-link']} ${styles['pagination-next']}`}>
+          <li className={styles.paginationItem}>
+            <Link to={getPageLink(currentPage + 1)} className={`${styles.paginationLink} ${styles.paginationNext}`}>
               Next →
             </Link>
           </li>
