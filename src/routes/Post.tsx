@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { remark } from 'remark'
 import html from 'remark-html'
 import frontmatter from 'remark-frontmatter'
+import styles from './Post.module.css'
 
 type PostProps = Readonly<{
   baseDir?: 'posts' | 'posts-test'
@@ -91,6 +92,6 @@ export default function Post({ baseDir = 'posts' }: PostProps) {
   }
 
   return (
-    <article dangerouslySetInnerHTML={{ __html: renderedHtml }} />
+    <article className={styles.article} dangerouslySetInnerHTML={{ __html: renderedHtml }} />
   )
 }
