@@ -21,5 +21,5 @@ test('should render post list', async ({ mount }) => {
   const component = await mountApp(mount)
 
   // Wait for posts to load - find the list by looking for the first post link
-  await expect(component.locator('a').first()).toBeVisible()
+  await expect(component.getByRole('link').filter({ hasText: /.+/ }).first()).toBeVisible()
 })
