@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { useState } from "react";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 
 export function ThrowError({ shouldThrow }: Readonly<{ shouldThrow: boolean }>) {
   if (shouldThrow) {
-    throw new Error('Test error')
+    throw new Error("Test error");
   }
-  return <div>No error</div>
+  return <div>No error</div>;
 }
 
 export function ErrorTrigger() {
-  const [shouldThrow, setShouldThrow] = useState(false)
+  const [shouldThrow, setShouldThrow] = useState(false);
 
   return (
     <div>
@@ -18,11 +18,11 @@ export function ErrorTrigger() {
         <ThrowError shouldThrow={shouldThrow} />
       </ErrorBoundary>
     </div>
-  )
+  );
 }
 
 export function ErrorTriggerWithCustomFallback() {
-  const [shouldThrow, setShouldThrow] = useState(false)
+  const [shouldThrow, setShouldThrow] = useState(false);
 
   return (
     <div>
@@ -31,5 +31,5 @@ export function ErrorTriggerWithCustomFallback() {
         <ThrowError shouldThrow={shouldThrow} />
       </ErrorBoundary>
     </div>
-  )
+  );
 }

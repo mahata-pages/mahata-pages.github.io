@@ -1,13 +1,13 @@
 ---
-title: 'ギブアップ: Software Engineering at Google '
-date: '2024-01-05'
+title: "ギブアップ: Software Engineering at Google "
+date: "2024-01-05"
 ---
 
 途中まで読んだ『[Software Engineer at Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/)』をギブアップしました。この本は去年の内に半分くらいまで読み、その後で放ったらかしにしていたものです。何章か感想を書いたりもしました。
 
-* [Software Engineering at Google: Chapter 1 - What Is Software Engineering](https://mahata.vercel.app/posts/2023-02-06-software-engineering-at-google-chapter1-what-is-software-engineering)
-* [Software Engineering at Google: Chapter 2 - How To Work Well On Teams](https://mahata.vercel.app/posts/2023-02-10-software-engineering-at-google-chapter2-how-to-work-well-on-teams)
-* [Software Engineering at Google: Chapter 3 - Knowledge Sharing](https://mahata.vercel.app/posts/2023-02-14-software-engineering-at-google-chapter3-knowledge-sharing)
+- [Software Engineering at Google: Chapter 1 - What Is Software Engineering](https://mahata.vercel.app/posts/2023-02-06-software-engineering-at-google-chapter1-what-is-software-engineering)
+- [Software Engineering at Google: Chapter 2 - How To Work Well On Teams](https://mahata.vercel.app/posts/2023-02-10-software-engineering-at-google-chapter2-how-to-work-well-on-teams)
+- [Software Engineering at Google: Chapter 3 - Knowledge Sharing](https://mahata.vercel.app/posts/2023-02-14-software-engineering-at-google-chapter3-knowledge-sharing)
 
 第三章を読んだ後、気になる章をピックアップして読むスタイルに変えて、最終的に興味を失った、という感じです。
 

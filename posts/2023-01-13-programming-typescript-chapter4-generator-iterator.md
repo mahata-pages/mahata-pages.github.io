@@ -1,6 +1,6 @@
 ---
-title: '『プログラミングTypeScript』 第四章 - ジェネレーターとイテレーター'
-date: '2023-01-13'
+title: "『プログラミングTypeScript』 第四章 - ジェネレーターとイテレーター"
+date: "2023-01-13"
 ---
 
 『[プログラミングTypeScript](https://www.oreilly.co.jp/books/9784873119045/)』の第四章ではジェネレーターおよびイテレーターに関するセクションがある。そこではフィボナッチ数を生成するジェネレーターを返す関数 (ジェネレーター関数) が例示されている。
@@ -10,36 +10,36 @@ date: '2023-01-13'
 [全体のコードは次の通り](https://www.typescriptlang.org/ja/play?#code/GYVwdgxgLglg9mABAKggJwKYEMoYApowC2GA4hmBmjnGgBQCUiA3gFCKIQIDOUiADoRLdEAXkSUA7ogDKGKAB4wIIgCMqAPkat2iADbzOINJjB9xAJl2SAFjAOI6UNCAxM2HDrfsZHz1+66nvqGMNwExL7i-hhBnsC0jlxgvAJCvnDAaZHcgcHBMFl0EMamfACk2SRiouIADHn5BeHpYojAWHrcsU3BqphYANZxwQC+I4jjE4WOAIRhESSNTSUmFFAA1BsA3BMcybDKPflTTYI5AHRYACbXxaXrDBP92MNjOsEAnjAYetdGazMW104ymyVS5xI5Eo1CgiXE6GwuEWZAoVBo9CeCTQjgMfBgbTq20QBIUiAAjHUiSSto1wXADBc9HAAOZ0SGomEYi6UAAeUEYT3GQA)。
 
 ```typescript
-function *createPrimeGenerator() {
-  const primes = new Set<number>()
+function* createPrimeGenerator() {
+  const primes = new Set<number>();
 
-  let current = 2
+  let current = 2;
   while (true) {
     while (true) {
-      let isPrime = true
+      let isPrime = true;
       for (const prime of primes) {
         if (current % prime === 0) {
-          isPrime = false
-          break
+          isPrime = false;
+          break;
         }
       }
 
       if (!isPrime) {
-        current++
-        continue
+        current++;
+        continue;
       }
 
-      primes.add(current)
-      break
+      primes.add(current);
+      break;
     }
 
-    yield current++
+    yield current++;
   }
 }
 
-const primeGenerator = createPrimeGenerator()
+const primeGenerator = createPrimeGenerator();
 for (let i = 0; i < 100; i++) {
-  console.log(primeGenerator.next())
+  console.log(primeGenerator.next());
 }
 ```
 

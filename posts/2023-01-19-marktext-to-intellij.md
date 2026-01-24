@@ -1,6 +1,6 @@
 ---
-title: 'MarkText から IntelliJ への移行'
-date: '2023-01-19'
+title: "MarkText から IntelliJ への移行"
+date: "2023-01-19"
 ---
 
 [2022 年の振り返り記事](/posts/2022-12-23-retrospective)でマークダウンエディタとして [MarkText](https://marktext.app/) を使っていると書いた。

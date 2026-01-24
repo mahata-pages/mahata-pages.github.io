@@ -1,14 +1,14 @@
-import { Link } from 'react-router-dom'
-import type { PostMetadata } from '@/utils/posts'
-import styles from './PostList.module.css'
+import { Link } from "react-router-dom";
+import type { PostMetadata } from "@/utils/posts";
+import styles from "./PostList.module.css";
 
 type PostListProps = Readonly<{
-  posts: PostMetadata[]
-}>
+  posts: PostMetadata[];
+}>;
 
 export function PostList({ posts }: PostListProps) {
   if (posts.length === 0) {
-    return <p>No posts found.</p>
+    return <p>No posts found.</p>;
   }
 
   return (
@@ -19,14 +19,14 @@ export function PostList({ posts }: PostListProps) {
             {post.title}
           </Link>
           <time className={styles.postDate} dateTime={post.date}>
-            {new Date(post.date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
+            {new Date(post.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
             })}
           </time>
         </li>
       ))}
     </ul>
-  )
+  );
 }

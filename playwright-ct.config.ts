@@ -1,33 +1,31 @@
-import { defineConfig, devices } from '@playwright/experimental-ct-react'
-import path from 'path'
-import { fileURLToPath } from 'url'
+import { defineConfig, devices } from "@playwright/experimental-ct-react";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  testDir: './src',
-  testMatch: ['**/*.ct.spec.{ts,tsx}'],
+  testDir: "./src",
+  testMatch: ["**/*.ct.spec.{ts,tsx}"],
   fullyParallel: true,
-  reporter: process.env.CI
-    ? [['list']]
-    : [['list'], ['html', { open: 'never' }]],
+  reporter: process.env.CI ? [["list"]] : [["list"], ["html", { open: "never" }]],
   use: {
-    trace: 'on-first-retry',
+    trace: "on-first-retry",
     ctViteConfig: {
       resolve: {
         alias: {
-          '@': path.resolve(__dirname, 'src'),
+          "@": path.resolve(__dirname, "src"),
         },
       },
-      assetsInclude: ['**/*.md'],
+      assetsInclude: ["**/*.md"],
     },
   },
   projects: [
     {
-      name: 'chromium',
+      name: "chromium",
       use: {
-        ...devices['Desktop Chrome'],
+        ...devices["Desktop Chrome"],
       },
     },
   ],
-})
+});

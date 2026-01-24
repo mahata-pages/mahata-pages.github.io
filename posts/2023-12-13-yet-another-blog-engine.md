@@ -1,6 +1,6 @@
 ---
-title: '近況報告 - ktlog'
-date: '2023-12-13'
+title: "近況報告 - ktlog"
+date: "2023-12-13"
 ---
 
 最近は [ktlog](https://github.com/mahata/ktlog) というサービスを作っています。これは Spring Boot (Kotlin) と React (TypeScript) で作られているブログサービスです。...というのは言い過ぎで、ブログサービスに **なる予定のもの** というのが正しいです。

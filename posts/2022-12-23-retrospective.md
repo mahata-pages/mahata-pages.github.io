@@ -1,6 +1,6 @@
 ---
-title: '2022 年の振り返り'
-date: '2022-12-23'
+title: "2022 年の振り返り"
+date: "2022-12-23"
 ---
 
 [去年に続き](https://mahata.gitlab.io/post/2021-12-25-retrospective/)、今年の出来事を振り返ってみようと思う。
@@ -11,18 +11,18 @@ date: '2022-12-23'
 
 今年の前半は図書館やオンライン書店で評判のよい本を選んで読んでいた。具体的には次のような本を読んだ。
 
-* [第2版 ゼロからはじめるデータベース操作](https://www.shoeisha.co.jp/book/detail/9784798144450) ([感想ブログ記事](https://mahata.gitlab.io/post/2022-05-16-zerokara-hajimeru-database/))
-* [テスト駆動開発](https://www.ohmsha.co.jp/book/9784274217883/)
-* [エクストリームプログラミング](https://www.ohmsha.co.jp/book/9784274217623/) ([感想ブログ記事](https://mahata.gitlab.io/post/2022-06-10-extreme-programming/))
+- [第2版 ゼロからはじめるデータベース操作](https://www.shoeisha.co.jp/book/detail/9784798144450) ([感想ブログ記事](https://mahata.gitlab.io/post/2022-05-16-zerokara-hajimeru-database/))
+- [テスト駆動開発](https://www.ohmsha.co.jp/book/9784274217883/)
+- [エクストリームプログラミング](https://www.ohmsha.co.jp/book/9784274217623/) ([感想ブログ記事](https://mahata.gitlab.io/post/2022-06-10-extreme-programming/))
 
 今年の中旬に転職した後は、転職先の福利厚生の一環で [O'Reilly Learning Platform](https://www.oreilly.com/online-learning/) のアカウントを取得できたので、O'Reilly の本や動画ばかりを眺めていた。
 
 O'Reilly Learning Platform ではコンテンツの消化率がパーセントで表示される。50% 以上の消化率であったコンテンツは次の通りである。
 
-* [A Beginner's Guide to Creating iPhone Apps for iOS 15 Using Swift UI](https://learning.oreilly.com/videos/a-beginners-guide/9781803241111/)
-* [CSS for Everybody: From Beginner to Boss](https://learning.oreilly.com/videos/css-for-everybody/9781801071949/)
-* [Spring and Spring Boot Fundamentals, 3E](https://learning.oreilly.com/videos/spring-and-spring/0636920620938/)
-* [Certified Kubernetes Security Specialist (CKS) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-security/9781098132965/)
+- [A Beginner's Guide to Creating iPhone Apps for iOS 15 Using Swift UI](https://learning.oreilly.com/videos/a-beginners-guide/9781803241111/)
+- [CSS for Everybody: From Beginner to Boss](https://learning.oreilly.com/videos/css-for-everybody/9781801071949/)
+- [Spring and Spring Boot Fundamentals, 3E](https://learning.oreilly.com/videos/spring-and-spring/0636920620938/)
+- [Certified Kubernetes Security Specialist (CKS) Study Guide](https://learning.oreilly.com/library/view/certified-kubernetes-security/9781098132965/)
 
 iOS や CSS は仕事で必要なので読んだ (観た)。Spring (Boot) や CKS は単に技術的な興味で読んだ。
 
@@ -34,13 +34,13 @@ iOS や CSS は仕事で必要なので読んだ (観た)。Spring (Boot) や CK
 
 2022年に読んで面白かったのは次のタイトルである (2022 年に連載されていたものとは限らない)。
 
-* ザ・ファブル
-* 進撃の巨人
-* 嘘喰い
-* キングダム
-* スナックバス江
-* Hunter x Hunter
-* 葬送のフリーレン
+- ザ・ファブル
+- 進撃の巨人
+- 嘘喰い
+- キングダム
+- スナックバス江
+- Hunter x Hunter
+- 葬送のフリーレン
 
 「流行っているものが好き」という感じのリストになってしまった...。流行っているものには理由があるんだなあという感想。
 
@@ -162,6 +162,6 @@ AirPods Pro は初代も持っていて満足していたけど、日常的に�
 
 その他、オンライン大学院にも少し興味がある。ただ、かなり時間を取られそうなので、手が出ない可能性もある。本当に手が出ないかどうか確かめるため MOOC でいくつか大学院レベルの講義を受講するくらいが現実的なラインかもしれない。
 
-あとは CKA が2023年10月に期限切れしてしまうので、その前に  CKS に更新しておきたい。
+あとは CKA が2023年10月に期限切れしてしまうので、その前に CKS に更新しておきたい。
 
 仕事と関係ないところでは、家族ともども健康でいたいということと、子どもたちのために少し外出を増やしたいと思っている。ただし、こればかりは流行り病の状況次第になってしまうけど...。

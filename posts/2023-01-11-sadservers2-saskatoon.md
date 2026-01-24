@@ -1,6 +1,6 @@
 ---
 title: 'SadServers - "Saskatoon" の解説'
-date: '2023-01-11'
+date: "2023-01-11"
 ---
 
 [前回](/posts/2023-01-10-sadservers1-saint-john)に続いて SadServers の ["Saskatoon": counting IPs.](https://sadservers.com/newserver/saskatoon#) を解いてみよう。概要は次の通りだ。

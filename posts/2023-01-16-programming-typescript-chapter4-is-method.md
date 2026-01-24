@@ -1,26 +1,26 @@
 ---
-title: '『プログラミングTypeScript』 第四章 - is メソッドの実装'
-date: '2023-01-16'
+title: "『プログラミングTypeScript』 第四章 - is メソッドの実装"
+date: "2023-01-16"
 ---
 
 『[プログラミングTypeScript](https://www.oreilly.co.jp/books/9784873119045/)』の第四章の練習問題に次のようなものがある。
 
 > 5. 型安全なアサーション関数、isを実装してください。型で概略を記述することから始めます。これは、完成したら、次のように使えるものです。
 >
->   ```typescript
->   // stringとstringを比較します
->   is('string', 'otherstring') // false
->   
->   // booleanとbooleanを比較します
->   is(true, false) // false
->   
->   // numberとnumberを比較します
->   is(42, 42) // true
->   
->   // 異なる型同士を比較すると、コンパイル時エラーになります
->   is(10, 'foo') // エラー TS2345: 型 '"foo"' の引数を型 'number' の
->                 // パラメーターに割り当てることはできません。
->   ```
+> ```typescript
+> // stringとstringを比較します
+> is("string", "otherstring"); // false
+>
+> // booleanとbooleanを比較します
+> is(true, false); // false
+>
+> // numberとnumberを比較します
+> is(42, 42); // true
+>
+> // 異なる型同士を比較すると、コンパイル時エラーになります
+> is(10, "foo"); // エラー TS2345: 型 '"foo"' の引数を型 'number' の
+> // パラメーターに割り当てることはできません。
+> ```
 
 よしよし、そんなに難しくはなさそうだ。この章の後半で出てきたジェネリック型を使えばできるのだろう。こうかな?
 
@@ -41,7 +41,7 @@ is([1], [1, 2], [1, 2, 3]); // false
 
 ```typescript
 function is<T>(first: T, ...rest: T[]) {
-  return rest.every(_ => _ === first);
+  return rest.every((_) => _ === first);
 }
 ```
 
@@ -49,7 +49,7 @@ function is<T>(first: T, ...rest: T[]) {
 
 ```typescript
 function is<T>(first: T, ...rest: [T, ...T[]]): boolean {
-  return rest.every(_ => _ === first)
+  return rest.every((_) => _ === first);
 }
 ```
 
