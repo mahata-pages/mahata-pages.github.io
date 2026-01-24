@@ -37,7 +37,6 @@ function App() {
     <>
       <Header />
       <main>
-        <h1>Posts</h1>
         <ErrorBoundary>
           <Suspense fallback={<p>Loading posts...</p>}>
             <PostsContent />

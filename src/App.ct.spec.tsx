@@ -11,12 +11,6 @@ const mountApp = async (mount: ComponentFixtures['mount']) => {
   )
 }
 
-test('should render heading', async ({ mount }) => {
-  const component = await mountApp(mount)
-
-  await expect(component.getByRole('heading', { name: 'Posts' })).toBeVisible()
-})
-
 test('should render post list', async ({ mount }) => {
   const component = await mountApp(mount)
 

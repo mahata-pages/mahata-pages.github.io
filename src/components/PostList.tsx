@@ -12,7 +12,7 @@ export function PostList({ posts }: PostListProps) {
   }
 
   return (
-    <ul className={styles.postList}>
+    <ul className={styles.postList} aria-label="Posts">
       {posts.map((post) => (
         <li key={post.slug} className={styles.postListItem}>
           <Link to={`/posts/${post.slug}`} className={styles.postLink}>
