@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/experimental-ct-react'
 import type { ComponentFixtures } from '@playwright/experimental-ct-react'
 import { MemoryRouter, Routes, Route } from 'react-router-dom'
+import { Header } from '@/Header'
 import Post from '@/routes/Post'
 
 const mountAtPath = async (
@@ -10,15 +11,23 @@ const mountAtPath = async (
 ) => {
   return await mount(
     <MemoryRouter initialEntries={[path]}>
-      <Routes>
-        <Route path="/posts/:slug" element={<Post baseDir={baseDir} />} />
-      </Routes>
+      <>
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/posts/:slug" element={<Post baseDir={baseDir} />} />
+          </Routes>
+        </main>
+      </>
     </MemoryRouter>,
   )
 }
 
-test('renders existing markdown post', async ({ mount }) => {
+test('renders header and existing markdown post', async ({ mount }) => {
   const component = await mountAtPath(mount, '/posts/yo', 'posts')
+
+  // Check header is rendered
+  await expect(component.locator('header')).toBeVisible()
 
   await expect(component.getByRole('heading', { name: 'Hey' })).toBeVisible()
   await expect(component).toContainText('Yo.')
@@ -26,6 +35,9 @@ test('renders existing markdown post', async ({ mount }) => {
 
 test('renders markdown with front matter', async ({ mount }) => {
   const component = await mountAtPath(mount, '/posts/front-matter', 'posts-test')
+
+  // Check header is rendered
+  await expect(component.locator('header')).toBeVisible()
 
   await expect(component).toBeVisible()
   await expect(component).toContainText('heyheyheyhey.')
@@ -35,6 +47,9 @@ test('renders markdown with front matter', async ({ mount }) => {
 test('shows not found for missing post', async ({ mount }) => {
   const component = await mountAtPath(mount, '/posts/missing', 'posts')
 
+  // Check header is rendered even when post not found
+  await expect(component.locator('header')).toBeVisible()
+
   await expect(component).toContainText('Post not found.')
   const backLink = component.getByRole('link', { name: 'Back home' })
   await expect(backLink).toHaveAttribute('href', '/')
@@ -43,6 +58,9 @@ test('shows not found for missing post', async ({ mount }) => {
 test('handles markdown with special characters and incomplete syntax', async ({ mount }) => {
   const component = await mountAtPath(mount, '/posts/special-chars', 'posts-test')
   
+  // Check header is rendered
+  await expect(component.locator('header')).toBeVisible()
+
   // Should render without crashing, even with incomplete link syntax
   await expect(component).toBeVisible()
   // remark-html sanitizes HTML-like tags; <Characters> is stripped for security
@@ -54,6 +72,9 @@ test('handles markdown with special characters and incomplete syntax', async ({ 
 test('handles markdown with unbalanced brackets', async ({ mount }) => {
   const component = await mountAtPath(mount, '/posts/unbalanced', 'posts-test')
   
+  // Check header is rendered
+  await expect(component.locator('header')).toBeVisible()
+
   // Should render without crashing, even if markdown has unbalanced syntax
   await expect(component).toBeVisible()
   await expect(component.getByRole('heading', { name: 'Heading' })).toBeVisible()
@@ -63,6 +84,9 @@ test('handles markdown with unbalanced brackets', async ({ mount }) => {
 test('handles empty markdown content', async ({ mount, page }) => {
   const component = await mountAtPath(mount, '/posts/empty', 'posts-test')
   
+  // Check header is rendered
+  await expect(component.locator('header')).toBeVisible()
+
   // Should render article element even with empty content
   // Article element exists in DOM but has no visible content
   const articleCount = await page.locator('article').count()
@@ -74,15 +98,19 @@ test('handles empty markdown content', async ({ mount, page }) => {
 test('handles markdown with potentially malicious HTML content', async ({ mount }) => {
   const component = await mountAtPath(mount, '/posts/malicious', 'posts-test')
   
+  // Check header is rendered
+  await expect(component.locator('header')).toBeVisible()
+
   await expect(component).toBeVisible()
   // The heading should be visible, proving markdown was processed
   await expect(component.getByRole('heading', { name: 'Safe Heading' })).toBeVisible()
   
   // Verify that HTML tags (script, img) are stripped by remark
-  // The HTML elements should not be present in the rendered output
-  // We verify by checking no script or img roles/elements exist
-  const scriptCount = await component.locator('script').count()
-  const imgCount = await component.locator('img').count()
+  // The HTML elements should not be present in the rendered article content
+  // We verify by checking no script or img elements exist in the article
+  const article = component.locator('article')
+  const scriptCount = await article.locator('script').count()
+  const imgCount = await article.locator('img').count()
   expect(scriptCount).toBe(0)
   expect(imgCount).toBe(0)
 })
