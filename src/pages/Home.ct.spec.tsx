@@ -1,7 +1,6 @@
 import { test, expect } from '@playwright/experimental-ct-react'
 import type { ComponentFixtures } from '@playwright/experimental-ct-react'
 import { MemoryRouter } from 'react-router-dom'
-import { Header } from '@/Header'
 import { Home } from '@/pages/Home'
 
 const mountHome = async (mount: ComponentFixtures['mount']) => {

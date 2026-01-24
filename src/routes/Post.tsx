@@ -1,8 +1,9 @@
-import { useEffect, useMemo, useState } from 'react'
+import { Suspense, use, useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { remark } from 'remark'
 import html from 'remark-html'
 import frontmatter from 'remark-frontmatter'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
 import styles from './Post.module.css'
 
 type PostProps = Readonly<{
@@ -21,45 +22,38 @@ const testPosts = import.meta.glob('../../posts-test/*.md', {
 
 export default function Post({ baseDir = 'posts' }: PostProps) {
   const { slug = '' } = useParams()
-  const [markdown, setMarkdown] = useState<string | null | undefined>(undefined)
+  return (
+    <ErrorBoundary fallback={<NotFound />}>
+      <Suspense fallback={<Loading />}>
+        <PostContent baseDir={baseDir} slug={slug} />
+      </Suspense>
+    </ErrorBoundary>
+  )
+}
 
-  useEffect(() => {
-    const posts = baseDir === 'posts-test' ? testPosts : prodPosts
-    const postPath =
-      baseDir === 'posts-test'
-        ? `../../posts-test/${slug}.md`
-        : `../../posts/${slug}.md`
+function PostContent({
+  baseDir,
+  slug,
+}: PostProps & { slug: string }) {
+  const posts = baseDir === 'posts-test' ? testPosts : prodPosts
+  const postPath =
+    baseDir === 'posts-test'
+      ? `../../posts-test/${slug}.md`
+      : `../../posts/${slug}.md`
 
-    const loadPost = posts[postPath]
+  const loadPost = posts[postPath]
 
-    let isCancelled = false
+  if (!slug) {
+    throw new Error('Post slug is missing')
+  }
 
-    Promise.resolve()
-      .then(() => {
-        if (!loadPost) {
-          return null
-        }
-        return loadPost()
-      })
-      .then((content) => {
-        if (!isCancelled) {
-          setMarkdown(content as string | null)
-        }
-      })
-      .catch((error) => {
-        console.error('Error loading post:', error)
-        if (!isCancelled) {
-          setMarkdown(null)
-        }
-      })
+  if (!loadPost) {
+    throw new Error('Post not found')
+  }
 
-    return () => {
-      isCancelled = true
-    }
-  }, [baseDir, slug])
+  const markdown = use(loadPost()) as string
 
   const renderedHtml = useMemo(() => {
-    if (markdown === undefined || markdown === null) return ''
     try {
       const processed = remark()
         .use(frontmatter)
@@ -72,26 +66,26 @@ export default function Post({ baseDir = 'posts' }: PostProps) {
     }
   }, [markdown])
 
-  if (markdown === undefined) {
-    return (
-      <div role="status" aria-live="polite">
-        <p>Loading...</p>
-      </div>
-    )
-  }
-
-  if (markdown === null) {
-    return (
-      <div>
-        <p>Post not found.</p>
-        <p>
-          <Link to="/">Back home</Link>
-        </p>
-      </div>
-    )
-  }
-
   return (
     <article className={styles.article} dangerouslySetInnerHTML={{ __html: renderedHtml }} />
+  )
+}
+
+function Loading() {
+  return (
+    <article className={styles.article} role="status" aria-live="polite">
+      <p>Loading...</p>
+    </article>
+  )
+}
+
+function NotFound() {
+  return (
+    <div>
+      <p>Post not found.</p>
+      <p>
+        <Link to="/">Back home</Link>
+      </p>
+    </div>
   )
 }
