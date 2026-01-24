@@ -2,22 +2,28 @@ import "@acab/reset.css"
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import App from '@/App'
+import { Layout } from '@/Layout'
+import { Home } from '@/pages/Home'
 import Health from '@/routes/Health'
 import Post from '@/routes/Post'
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <App />,
+    element: <Layout />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/posts/:slug',
+        element: <Post />,
+      },
+    ],
   },
   {
     path: '/health',
     element: <Health />,
-  },
-  {
-    path: '/posts/:slug',
-    element: <Post />,
   },
 ])
 

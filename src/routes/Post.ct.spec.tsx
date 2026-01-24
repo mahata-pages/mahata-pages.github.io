@@ -10,14 +10,16 @@ const mountAtPath = async (
 ) => {
   return await mount(
     <MemoryRouter initialEntries={[path]}>
-      <Routes>
-        <Route path="/posts/:slug" element={<Post baseDir={baseDir} />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/posts/:slug" element={<Post baseDir={baseDir} />} />
+        </Routes>
+      </main>
     </MemoryRouter>,
   )
 }
 
-test('renders existing markdown post', async ({ mount }) => {
+test('renders header and existing markdown post', async ({ mount }) => {
   const component = await mountAtPath(mount, '/posts/yo', 'posts')
 
   await expect(component.getByRole('heading', { name: 'Hey' })).toBeVisible()
@@ -79,10 +81,11 @@ test('handles markdown with potentially malicious HTML content', async ({ mount 
   await expect(component.getByRole('heading', { name: 'Safe Heading' })).toBeVisible()
   
   // Verify that HTML tags (script, img) are stripped by remark
-  // The HTML elements should not be present in the rendered output
-  // We verify by checking no script or img roles/elements exist
-  const scriptCount = await component.locator('script').count()
-  const imgCount = await component.locator('img').count()
+  // The HTML elements should not be present in the rendered article content
+  // We verify by checking no script or img elements exist in the article
+  const article = component.locator('article')
+  const scriptCount = await article.locator('script').count()
+  const imgCount = await article.locator('img').count()
   expect(scriptCount).toBe(0)
   expect(imgCount).toBe(0)
 })
