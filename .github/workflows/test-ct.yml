@@ -1,4 +1,4 @@
-name: test-ct
+name: Lint and CI Tests with Playwright Component Testing
 
 on:
   push:
