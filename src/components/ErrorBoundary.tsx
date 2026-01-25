@@ -26,6 +26,11 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
     console.error("Error:", error, errorInfo);
   }
 
+  private formatErrorMessage(error: Error | undefined): string {
+    const message = String(error?.message ?? error ?? 'Unknown error');
+    return message.substring(0, MAX_ERROR_MESSAGE_LENGTH);
+  }
+
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -38,7 +43,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
             <details>
               <summary>Error details</summary>
               <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-                {String(this.state.error?.message ?? this.state.error ?? 'Unknown error').substring(0, MAX_ERROR_MESSAGE_LENGTH)}
+                {this.formatErrorMessage(this.state.error)}
               </pre>
             </details>
           )}
