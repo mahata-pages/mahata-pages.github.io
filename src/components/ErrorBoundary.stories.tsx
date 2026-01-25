@@ -15,7 +15,7 @@ export function ThrowLongError() {
 
 export function ThrowErrorWithoutMessage() {
   const error = new Error();
-  error.message = '';
+  error.message = "";
   throw error;
 }
 

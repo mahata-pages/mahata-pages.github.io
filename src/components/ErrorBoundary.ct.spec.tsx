@@ -1,6 +1,12 @@
 import { test, expect } from "@playwright/experimental-ct-react";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
-import { ErrorTrigger, ErrorTriggerWithCustomFallback, ThrowError, ThrowLongError, ThrowErrorWithoutMessage } from "./ErrorBoundary.stories";
+import {
+  ErrorTrigger,
+  ErrorTriggerWithCustomFallback,
+  ThrowError,
+  ThrowLongError,
+  ThrowErrorWithoutMessage,
+} from "./ErrorBoundary.stories";
 
 test("should render children when no error occurs", async ({ mount }) => {
   const component = await mount(

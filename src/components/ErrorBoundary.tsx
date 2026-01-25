@@ -29,7 +29,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   }
 
   private formatErrorMessage(error: Error | undefined): string {
-    const message = error?.message || 'Unknown error';
+    const message = error?.message || "Unknown error";
     return message.substring(0, MAX_ERROR_MESSAGE_LENGTH);
   }
 
@@ -38,18 +38,16 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      
+
       const shouldShowDetails = this.props.showErrorDetails ?? import.meta.env.DEV;
-      
+
       return (
         <div role="alert">
           <p>Something went wrong. Please try again later.</p>
           {shouldShowDetails && this.state.error && (
             <details>
               <summary>Error details</summary>
-              <pre className={styles.errorMessage}>
-                {this.formatErrorMessage(this.state.error)}
-              </pre>
+              <pre className={styles.errorMessage}>{this.formatErrorMessage(this.state.error)}</pre>
             </details>
           )}
         </div>
