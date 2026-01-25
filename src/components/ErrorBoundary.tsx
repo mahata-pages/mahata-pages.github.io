@@ -29,7 +29,17 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
       if (this.props.fallback) {
         return this.props.fallback;
       }
-      return <p>Something went wrong. Please try again later.</p>;
+      return (
+        <div>
+          <p>Something went wrong. Please try again later.</p>
+          {this.state.error && (
+            <details>
+              <summary>Error details</summary>
+              <pre>{this.state.error.message}</pre>
+            </details>
+          )}
+        </div>
+      );
     }
 
     return this.props.children;
