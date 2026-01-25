@@ -1,6 +1,6 @@
 ---
-title: '『プログラミングTypeScript』 第四章 - final 修飾子のエミュレート'
-date: '2023-01-23'
+title: "『プログラミングTypeScript』 第四章 - final 修飾子のエミュレート"
+date: "2023-01-23"
 ---
 
 『[プログラミングTypeScript](https://www.oreilly.co.jp/books/9784873119045/)』の第五章では、Java などのプログラミング言語における `final` キーワードを TypeScript で実現するアイディアについて紹介されている。面白いと思った。
@@ -16,7 +16,7 @@ class Mammal {
 
 class Dog extends Mammal {}
 
-const dog = new Dog()
+const dog = new Dog();
 ```
 
 このとき `class Dog extends Mammal {}` に対するエラーメッセージは `Cannot extend a class 'Mammal'. Class constructor is marked as private.(2675)` である。また `const dog = new Dog()` については `Constructor of class 'Mammal' is private and only accessible within the class declaration.(2673)` と言われる。エラーメッセージがすべてを言い表している。
@@ -27,14 +27,11 @@ const dog = new Dog()
 class Mammal {
   private constructor() {}
   static create() {
-    return new Mammal()
+    return new Mammal();
   }
 }
 
-const mammal = Mammal.create()
+const mammal = Mammal.create();
 ```
 
 これで Mammal は継承不可であり、そのインスタンスは `Mammal.create()` によって得られるようになった。
-
-
-

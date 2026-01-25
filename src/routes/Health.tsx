@@ -1,3 +1,3 @@
 export default function Health() {
-  return <div>OK</div>
+  return <div>OK</div>;
 }

@@ -1,34 +1,34 @@
-import "@acab/reset.css"
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Layout } from '@/Layout'
-import { Home } from '@/pages/Home'
-import Health from '@/routes/Health'
-import Post from '@/routes/Post'
+import "@acab/reset.css";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Layout } from "@/Layout";
+import { Home } from "@/pages/Home";
+import Health from "@/routes/Health";
+import Post from "@/routes/Post";
 
 const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: '/posts/:slug',
+        path: "/posts/:slug",
         element: <Post />,
       },
     ],
   },
   {
-    path: '/health',
+    path: "/health",
     element: <Health />,
   },
-])
+]);
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RouterProvider router={router} />
   </StrictMode>,
-)
+);

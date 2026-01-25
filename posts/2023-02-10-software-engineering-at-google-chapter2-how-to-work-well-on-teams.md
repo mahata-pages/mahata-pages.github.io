@@ -1,6 +1,6 @@
 ---
-title: 'Software Engineering at Google: Chapter 2 - How To Work Well On Teams'
-date: '2023-02-10'
+title: "Software Engineering at Google: Chapter 2 - How To Work Well On Teams"
+date: "2023-02-10"
 ---
 
 この記事は『[Software Engineering at Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/)』の第二章「How To Work Well On Teams」を読んだ感想である。
@@ -22,7 +22,7 @@ Linus Torvalds や Guido Van Rossum などの偉大なプログラマーが「�
 次の言葉は Richard Hamming さんのエッセイからの引用である。
 
 > The moral is this: do not underestimate the power of playing the social game.
-> 
+>
 > (抄訳: ソーシャルゲームの力を見くびらないことです)
 
 彼は秘書に対して愛想よく振る舞う「努力」をしていた。のちに彼が仕事でトラブルを経験したとき、その秘書は身を粉にして彼を助けるべく動いてくれた。この人間関係の力学を「ソーシャルゲーム」と表現している。情けは人の為ならず、ということだ。
@@ -32,7 +32,7 @@ Linus Torvalds や Guido Van Rossum などの偉大なプログラマーが「�
 この「友好的に接することで、相手の協力を得られる」ことや「適切な格好をすることで、相手からの評価を得られる」ことを Richard さんは「システム」と呼んでいる。
 
 > By realizing you have to use the system and studying how to get the system to do your work, you learn how to adapt the system to your desires. Or you can fight it steadily, as a small, undeclared war, for the whole of your life.
-> 
+>
 > (抄訳: システムを使わなければならないことを自覚し、システムに仕事をさせる方法を研究して、システムを自分の要望に適合させる方法を学びましょう。そうしないと、一生をかけて些細な戦争を繰り返すことになります)
 
 まったくその通りだ。
@@ -44,7 +44,7 @@ Linus Torvalds や Guido Van Rossum などの偉大なプログラマーが「�
 そのような態度をコードレビューに反映すると、次のようなコメントになる。
 
 > “Hey, I’m confused by the control flow in this section here. I wonder if the xyzzy code pattern might make this clearer and easier to maintain?”
-> 
+>
 > (抄訳: ここの制御フローで混乱してしまいました。xyzzyのコードパターンを使えば、この部分がより明確になり、メンテナンスが楽になったりしないでしょうか?)
 
 攻撃的ではないし、フィードバックも与えられている。`I'm confused ...` の辺りは「あなたのコードが読みづらい」ではなく「わたしの理解が追いつかない」という感じで謙虚さを感じる。

@@ -1,6 +1,6 @@
 ---
-title: 'RSS リーダーへの回帰'
-date: '2023-01-20'
+title: "RSS リーダーへの回帰"
+date: "2023-01-20"
 ---
 
 [2022 年の振り返り記事](/posts/2022-12-23-retrospective)で Twitter 離れしたことを書いた。

@@ -1,6 +1,6 @@
 ---
-title: '『Tidy First?』'
-date: '2025-02-08'
+title: "『Tidy First?』"
+date: "2025-02-08"
 ---
 
 『[Tidy First?](https://www.oreilly.co.jp/books/9784814400911/)』を読みました。残念ながら、僕にはあまり響きませんでした。

@@ -1,6 +1,6 @@
 ---
-title: 'Software Engineering at Google: Chapter 3 - Knowledge Sharing'
-date: '2023-02-13'
+title: "Software Engineering at Google: Chapter 3 - Knowledge Sharing"
+date: "2023-02-13"
 ---
 
 『[Software Engineering at Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/)』の第三章「Knowledge Sharing」を読んだ。以下は感想文である。

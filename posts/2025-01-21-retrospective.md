@@ -1,15 +1,15 @@
 ---
-title: '2024 年の振り返り'
-date: '2025-01-21'
+title: "2024 年の振り返り"
+date: "2025-01-21"
 ---
 
 遅ればせながら、2024 年の振り返りを書きます。
 
 これまでの分はこちらの通りです。
 
-* [2023年のまとめ](https://mahata.vercel.app/posts/2023-12-22-retrospective)
-* [2022年のまとめ](https://mahata.vercel.app/posts/2022-12-23-retrospective)
-* [2021年のまとめ](https://mahata.gitlab.io/post/2021-12-25-retrospective/)
+- [2023年のまとめ](https://mahata.vercel.app/posts/2023-12-22-retrospective)
+- [2022年のまとめ](https://mahata.vercel.app/posts/2022-12-23-retrospective)
+- [2021年のまとめ](https://mahata.gitlab.io/post/2021-12-25-retrospective/)
 
 ## 「去年までの振り返り」の振り返り
 
@@ -53,11 +53,11 @@ date: '2025-01-21'
 
 オンラインの資料とは別に、オフラインでは図書館で本を借りて読むことが増えました。2024 年は次のような本に目を通しました。
 
-* [スタッフエンジニアの道 - 優れた技術専門職になるためのガイド](https://www.oreilly.co.jp/books/9784814400867/)
-* [手を動かしてわかるクリーンアーキテクチャ - ヘキサゴナルアーキテクチャによるクリーンなアプリケーション開発](https://book.impress.co.jp/books/1123101096)
-* [関数型ドメインモデリング - ドメイン駆動設計とF#でソフトウェアの複雑さに立ち向かおう](https://tatsu-zine.com/books/domain-modeling-made-functional)
-* [ドメイン駆動設計をはじめよう - ソフトウェアの実装と事業戦略を結びつける実践技法](https://www.oreilly.co.jp/books/9784814400737/)
-* [なぜ依存を注入するのか DIの原理・原則とパターン](https://book.mynavi.jp/ec/products/detail/id=143373)
+- [スタッフエンジニアの道 - 優れた技術専門職になるためのガイド](https://www.oreilly.co.jp/books/9784814400867/)
+- [手を動かしてわかるクリーンアーキテクチャ - ヘキサゴナルアーキテクチャによるクリーンなアプリケーション開発](https://book.impress.co.jp/books/1123101096)
+- [関数型ドメインモデリング - ドメイン駆動設計とF#でソフトウェアの複雑さに立ち向かおう](https://tatsu-zine.com/books/domain-modeling-made-functional)
+- [ドメイン駆動設計をはじめよう - ソフトウェアの実装と事業戦略を結びつける実践技法](https://www.oreilly.co.jp/books/9784814400737/)
+- [なぜ依存を注入するのか DIの原理・原則とパターン](https://book.mynavi.jp/ec/products/detail/id=143373)
 
 「目を通した」という表現には複雑な気持ちを込めています。実はこれらの本は読み切れていません。図書館で借りて読むというスタイルであるため、年内に出版された本は取り合いになることが多く、読了に 2 週間以上かかるものは一度返す必要があります。そのため、一気通貫で読みづらい、という感じです。
 
@@ -65,9 +65,9 @@ date: '2025-01-21'
 
 ## 読んだ漫画本
 
-* [葬送のフリーレン](https://websunday.net/work/708/)
-* [COSMOS](https://www.sunday-webry.com/episode/4856001361087694972)
-* [僕の心のヤバイやつ](https://championcross.jp/series/899dda204c3f2/)
+- [葬送のフリーレン](https://websunday.net/work/708/)
+- [COSMOS](https://www.sunday-webry.com/episode/4856001361087694972)
+- [僕の心のヤバイやつ](https://championcross.jp/series/899dda204c3f2/)
 
 いずれも有名な漫画ですね。
 

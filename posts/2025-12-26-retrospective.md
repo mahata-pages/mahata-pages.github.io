@@ -1,16 +1,16 @@
 ---
-title: '2025 年の振り返り'
-date: '2025-12-26'
+title: "2025 年の振り返り"
+date: "2025-12-26"
 ---
 
 今年の振り返り記事です。毎年の恒例行事です。
 
 ## 去年までの振り返り
 
-* [2024年のまとめ](https://vercelog.mahata.org/posts/2025-01-21-retrospective)
-* [2023年のまとめ](https://mahata.vercel.app/posts/2023-12-22-retrospective)
-* [2022年のまとめ](https://mahata.vercel.app/posts/2022-12-23-retrospective)
-* [2021年のまとめ](https://mahata.gitlab.io/post/2021-12-25-retrospective/)
+- [2024年のまとめ](https://vercelog.mahata.org/posts/2025-01-21-retrospective)
+- [2023年のまとめ](https://mahata.vercel.app/posts/2023-12-22-retrospective)
+- [2022年のまとめ](https://mahata.vercel.app/posts/2022-12-23-retrospective)
+- [2021年のまとめ](https://mahata.gitlab.io/post/2021-12-25-retrospective/)
 
 ## 「去年までの振り返り」の振り返り
 

@@ -1,6 +1,6 @@
 ---
-title: 'Another Valid'
-date: '2024-01-14'
+title: "Another Valid"
+date: "2024-01-14"
 ---
 
 Content
