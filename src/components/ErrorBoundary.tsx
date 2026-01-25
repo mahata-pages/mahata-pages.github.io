@@ -1,4 +1,5 @@
 import { Component, type ReactNode, type ErrorInfo } from "react";
+import styles from "./ErrorBoundary.module.css";
 
 const MAX_ERROR_MESSAGE_LENGTH = 500;
 
@@ -42,7 +43,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
           {this.state.error && (
             <details>
               <summary>Error details</summary>
-              <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+              <pre className={styles.errorMessage}>
                 {this.formatErrorMessage(this.state.error)}
               </pre>
             </details>
