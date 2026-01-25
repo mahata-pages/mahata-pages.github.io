@@ -8,13 +8,25 @@ export function ThrowError({ shouldThrow }: Readonly<{ shouldThrow: boolean }>) 
   return <div>No error</div>;
 }
 
+export function ThrowLongError() {
+  const longMessage = "A".repeat(600);
+  throw new Error(longMessage);
+}
+
+export function ThrowErrorWithoutMessage() {
+  const error = new Error();
+  // Explicitly remove the message
+  Object.defineProperty(error, 'message', { value: '' });
+  throw error;
+}
+
 export function ErrorTrigger() {
   const [shouldThrow, setShouldThrow] = useState(false);
 
   return (
     <div>
       <button onClick={() => setShouldThrow(true)}>Trigger Error</button>
-      <ErrorBoundary>
+      <ErrorBoundary showErrorDetails={true}>
         <ThrowError shouldThrow={shouldThrow} />
       </ErrorBoundary>
     </div>
