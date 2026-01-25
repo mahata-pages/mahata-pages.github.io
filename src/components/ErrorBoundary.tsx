@@ -1,5 +1,7 @@
 import { Component, type ReactNode, type ErrorInfo } from "react";
 
+const MAX_ERROR_MESSAGE_LENGTH = 500;
+
 type ErrorBoundaryProps = Readonly<{
   children: ReactNode;
   fallback?: ReactNode;
@@ -36,7 +38,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
             <details>
               <summary>Error details</summary>
               <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
-                {String(this.state.error.message).substring(0, 500)}
+                {String(this.state.error?.message ?? this.state.error ?? 'Unknown error').substring(0, MAX_ERROR_MESSAGE_LENGTH)}
               </pre>
             </details>
           )}
