@@ -28,7 +28,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
   }
 
   private formatErrorMessage(error: Error | undefined): string {
-    const message = error?.message || String(error) || 'Unknown error';
+    const message = error?.message ?? 'Unknown error';
     return message.substring(0, MAX_ERROR_MESSAGE_LENGTH);
   }
 
