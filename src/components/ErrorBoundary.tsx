@@ -30,12 +30,14 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
         return this.props.fallback;
       }
       return (
-        <div>
+        <div role="alert">
           <p>Something went wrong. Please try again later.</p>
           {this.state.error && (
             <details>
               <summary>Error details</summary>
-              <pre>{this.state.error.message}</pre>
+              <pre style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>
+                {String(this.state.error.message).substring(0, 500)}
+              </pre>
             </details>
           )}
         </div>
