@@ -15,8 +15,7 @@ export function ThrowLongError() {
 
 export function ThrowErrorWithoutMessage() {
   const error = new Error();
-  // Explicitly remove the message
-  Object.defineProperty(error, 'message', { value: '' });
+  error.message = '';
   throw error;
 }
 
