@@ -2,7 +2,7 @@ import "@acab/reset.css";
 import "@/global.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import { Layout } from "@/Layout";
 import { Home } from "@/pages/Home";
 import Health from "@/routes/Health";
@@ -25,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/health",
     element: <Health />,
+  },
+  {
+    path: "/feed",
+    element: <Navigate to="/rss.xml" replace />,
   },
 ]);
 
