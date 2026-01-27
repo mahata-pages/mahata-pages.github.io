@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "tsx scripts/generate-rss.ts",
     "dev": "vite",
     "prebuild": "tsx scripts/generate-rss.ts",
     "build": "tsc -b && vite build",
