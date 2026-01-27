@@ -1,4 +1,4 @@
-import { parse } from "yaml";
+import { extractFrontMatter, isValidFrontMatter } from "./frontMatter";
 
 export type PostMetadata = {
   slug: string;
@@ -16,16 +16,9 @@ export async function extractPostsMetadata(
       const module = (await loadModule()) as { default: string };
       const content = module.default;
 
-      // Extract front matter YAML block
-      const frontMatterRegex = /^---\r?\n([\s\S]*?)\r?\n---/;
-      const frontMatterMatch = frontMatterRegex.exec(content);
-      if (!frontMatterMatch) continue;
-
-      const frontMatter = parse(frontMatterMatch[1]) as {
-        title?: string;
-        date?: string;
-      };
-      if (!frontMatter.title || !frontMatter.date) continue;
+      // Extract and validate front matter
+      const frontMatter = extractFrontMatter(content);
+      if (!isValidFrontMatter(frontMatter)) continue;
 
       // Extract slug from path (e.g., '../../posts/my-post.md' -> 'my-post')
       const slug = path.split("/").pop()?.replace(".md", "") || "";
