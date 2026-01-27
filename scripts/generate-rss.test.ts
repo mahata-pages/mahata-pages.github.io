@@ -394,7 +394,7 @@ Content ${i}.`;
       const posts = await extractPosts(testDir);
 
       expect(posts).toHaveLength(10);
-      
+
       // Verify sorting - dates should be in descending order
       for (let i = 0; i < posts.length - 1; i++) {
         const date1 = new Date(posts[i].date).getTime();
@@ -456,7 +456,8 @@ Content.`;
     });
 
     it("should handle posts with Windows line endings (CRLF)", async () => {
-      const windowsPost = "---\r\ntitle: \"Windows Post\"\r\ndate: \"2024-01-15\"\r\n---\r\n\r\nContent.";
+      const windowsPost =
+        '---\r\ntitle: "Windows Post"\r\ndate: "2024-01-15"\r\n---\r\n\r\nContent.';
 
       await writeFile(join(testDir, "windows.md"), windowsPost);
 
