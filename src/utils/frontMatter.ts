@@ -6,13 +6,6 @@ export interface FrontMatter {
   [key: string]: unknown;
 }
 
-export interface ParsedPost {
-  slug: string;
-  title: string;
-  date: string;
-  content?: string;
-}
-
 /**
  * Regex pattern to match front matter YAML block
  */
