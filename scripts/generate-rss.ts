@@ -1,12 +1,11 @@
 import { Feed } from "feed";
 import { readdir, readFile, writeFile } from "fs/promises";
 import { join } from "path";
-import { parse } from "yaml";
-
-interface PostFrontMatter {
-  title?: string;
-  date?: string;
-}
+import {
+  extractFrontMatter,
+  isValidFrontMatter,
+  extractContentAfterFrontMatter,
+} from "../src/utils/frontMatter.js";
 
 interface Post {
   slug: string;
@@ -31,21 +30,16 @@ async function extractPosts(): Promise<Post[]> {
       const filePath = join(POSTS_DIR, filename);
       const content = await readFile(filePath, "utf-8");
 
-      // Extract front matter YAML block
-      const frontMatterRegex = /^---\r?\n([\s\S]*?)\r?\n---/;
-      const frontMatterMatch = frontMatterRegex.exec(content);
-      if (!frontMatterMatch) continue;
-
-      const frontMatter = parse(frontMatterMatch[1]) as PostFrontMatter;
-      if (!frontMatter.title || !frontMatter.date) continue;
+      // Extract and validate front matter
+      const frontMatter = extractFrontMatter(content);
+      if (!isValidFrontMatter(frontMatter)) continue;
 
       // Extract slug from filename (e.g., 'my-post.md' -> 'my-post')
       const slug = filename.replace(".md", "");
       if (!slug) continue;
 
       // Extract content after front matter
-      const contentStart = frontMatterMatch[0].length;
-      const postContent = content.substring(contentStart).trim();
+      const postContent = extractContentAfterFrontMatter(content);
 
       posts.push({
         slug,
