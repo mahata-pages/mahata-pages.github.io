@@ -28,5 +28,3 @@ playwright/.cache/*
 *.njsproj
 *.sln
 *.sw?
-
-public/rss.xml

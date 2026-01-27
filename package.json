@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "pnpm prebuild && vite",
     "prebuild": "tsx scripts/generate-rss.ts",
     "build": "tsc -b && vite build",
     "lint": "oxlint .",
