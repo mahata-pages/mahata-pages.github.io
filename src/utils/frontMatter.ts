@@ -14,14 +14,18 @@ export interface ParsedPost {
 }
 
 /**
+ * Regex pattern to match front matter YAML block
+ */
+const FRONT_MATTER_REGEX = /^---\r?\n([\s\S]*?)\r?\n---/;
+
+/**
  * Extracts and parses front matter from markdown content
  * @param content - The markdown content with front matter
  * @returns Parsed front matter object or null if no front matter found
  * @throws Error if front matter exists but YAML parsing fails
  */
 export function extractFrontMatter(content: string): FrontMatter | null {
-  const frontMatterRegex = /^---\r?\n([\s\S]*?)\r?\n---/;
-  const frontMatterMatch = frontMatterRegex.exec(content);
+  const frontMatterMatch = FRONT_MATTER_REGEX.exec(content);
 
   if (!frontMatterMatch) {
     return null;
@@ -37,8 +41,7 @@ export function extractFrontMatter(content: string): FrontMatter | null {
  * @returns The content after front matter, trimmed
  */
 export function extractContentAfterFrontMatter(content: string): string {
-  const frontMatterRegex = /^---\r?\n([\s\S]*?)\r?\n---/;
-  const frontMatterMatch = frontMatterRegex.exec(content);
+  const frontMatterMatch = FRONT_MATTER_REGEX.exec(content);
 
   if (!frontMatterMatch) {
     return content;
