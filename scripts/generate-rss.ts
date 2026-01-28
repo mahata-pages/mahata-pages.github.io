@@ -15,7 +15,7 @@ interface Post {
   filename: string;
 }
 
-const SITE_URL = process.env.SITE_URL || "https://blog.mahata.or";
+const SITE_URL = process.env.SITE_URL || "https://blog.mahata.org";
 const POSTS_DIR = join(process.cwd(), "posts");
 const OUTPUT_DIR = join(process.cwd(), "public");
 const OUTPUT_FILE = join(OUTPUT_DIR, "rss.xml");
