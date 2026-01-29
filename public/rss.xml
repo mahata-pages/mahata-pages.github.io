@@ -2,17 +2,24 @@
 <rss version="2.0">
     <channel>
         <title>mahata.or blog</title>
-        <link>https://blog.mahata.or</link>
+        <link>https://blog.mahata.org</link>
         <description>A blog about software engineering, programming, and life</description>
-        <lastBuildDate>Tue, 27 Jan 2026 14:55:30 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 29 Jan 2026 13:38:47 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>© 2026 mahata.or</copyright>
         <item>
+            <title><![CDATA[2026年のブログ]]></title>
+            <link>https://blog.mahata.org/posts/2026-01-29-blog-in-2026</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2026-01-29-blog-in-2026</guid>
+            <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[ブログを、また、また自作しました。]]></description>
+        </item>
+        <item>
             <title><![CDATA[2025 年の振り返り]]></title>
-            <link>https://blog.mahata.or/posts/2025-12-26-retrospective</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2025-12-26-retrospective</guid>
+            <link>https://blog.mahata.org/posts/2025-12-26-retrospective</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2025-12-26-retrospective</guid>
             <pubDate>Fri, 26 Dec 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[今年の振り返り記事です。毎年の恒例行事です。
 
@@ -135,8 +142,8 @@ FYOPツアーは東京ドームの公演に参加しました。語彙に乏し�
         </item>
         <item>
             <title><![CDATA[『Tidy First?』]]></title>
-            <link>https://blog.mahata.or/posts/2025-02-08-tidy-first</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2025-02-08-tidy-first</guid>
+            <link>https://blog.mahata.org/posts/2025-02-08-tidy-first</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2025-02-08-tidy-first</guid>
             <pubDate>Sat, 08 Feb 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[『[Tidy First?](https://www.oreilly.co.jp/books/9784814400911/)』を読みました。残念ながら、僕にはあまり響きませんでした。
 
@@ -152,8 +159,8 @@ FYOPツアーは東京ドームの公演に参加しました。語彙に乏し�
         </item>
         <item>
             <title><![CDATA[『小さな習慣』]]></title>
-            <link>https://blog.mahata.or/posts/2025-02-07-mini-habits</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2025-02-07-mini-habits</guid>
+            <link>https://blog.mahata.org/posts/2025-02-07-mini-habits</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2025-02-07-mini-habits</guid>
             <pubDate>Fri, 07 Feb 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[『[小さな習慣](https://www.diamond.co.jp/book/9784478065778.html)』を読みました。良い本でした。
 
@@ -171,8 +178,8 @@ FYOPツアーは東京ドームの公演に参加しました。語彙に乏し�
         </item>
         <item>
             <title><![CDATA[『TAKE NOTES!――メモで、あなただけのアウトプットが自然にできるようになる』]]></title>
-            <link>https://blog.mahata.or/posts/2025-01-29-take-notes</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2025-01-29-take-notes</guid>
+            <link>https://blog.mahata.org/posts/2025-01-29-take-notes</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2025-01-29-take-notes</guid>
             <pubDate>Wed, 29 Jan 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[『[TAKE NOTES!――メモで、あなただけのアウトプットが自然にできるようになる](https://www.amazon.co.jp/dp/4296000411)』を読みました。
 
@@ -197,8 +204,8 @@ FYOPツアーは東京ドームの公演に参加しました。語彙に乏し�
         </item>
         <item>
             <title><![CDATA[2024 年の振り返り]]></title>
-            <link>https://blog.mahata.or/posts/2025-01-21-retrospective</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2025-01-21-retrospective</guid>
+            <link>https://blog.mahata.org/posts/2025-01-21-retrospective</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2025-01-21-retrospective</guid>
             <pubDate>Tue, 21 Jan 2025 00:00:00 GMT</pubDate>
             <description><![CDATA[遅ればせながら、2024 年の振り返りを書きます。
 
@@ -328,8 +335,8 @@ FYOPツアーは東京ドームの公演に参加しました。語彙に乏し�
         </item>
         <item>
             <title><![CDATA[『疲労とはなにか すべてはウイルスが知っていた』]]></title>
-            <link>https://blog.mahata.or/posts/2024-10-30-hiroutohananika</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2024-10-30-hiroutohananika</guid>
+            <link>https://blog.mahata.org/posts/2024-10-30-hiroutohananika</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2024-10-30-hiroutohananika</guid>
             <pubDate>Wed, 30 Oct 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[『[疲労とはなにか すべてはウイルスが知っていた](https://bookclub.kodansha.co.jp/product?item=0000385169)』を読みました。
 
@@ -355,8 +362,8 @@ FYOPツアーは東京ドームの公演に参加しました。語彙に乏し�
         </item>
         <item>
             <title><![CDATA[ギブアップ: Software Engineering at Google ]]></title>
-            <link>https://blog.mahata.or/posts/2024-01-05-giving-up-software-engineer-at-google</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2024-01-05-giving-up-software-engineer-at-google</guid>
+            <link>https://blog.mahata.org/posts/2024-01-05-giving-up-software-engineer-at-google</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2024-01-05-giving-up-software-engineer-at-google</guid>
             <pubDate>Fri, 05 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[途中まで読んだ『[Software Engineer at Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/)』をギブアップしました。この本は去年の内に半分くらいまで読み、その後で放ったらかしにしていたものです。何章か感想を書いたりもしました。
 
@@ -382,8 +389,8 @@ Google 製のプロダクトも、近年は魅力に欠けます。ChatGPT の�
         </item>
         <item>
             <title><![CDATA[運良く生きている]]></title>
-            <link>https://blog.mahata.or/posts/2024-01-04-sad-new-year</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2024-01-04-sad-new-year</guid>
+            <link>https://blog.mahata.org/posts/2024-01-04-sad-new-year</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2024-01-04-sad-new-year</guid>
             <pubDate>Thu, 04 Jan 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[2024 年は年初から悲しいニュースを多く目にしました。元日には[令和6年能登半島地震](https://ja.wikipedia.org/wiki/%E4%BB%A4%E5%92%8C6%E5%B9%B4%E8%83%BD%E7%99%BB%E5%8D%8A%E5%B3%B6%E5%9C%B0%E9%9C%87)が発生し、倒壊した建物や、燃え上がる家屋の様子などが東京都内の全てのテレビチャンネルで流れました。
 
@@ -397,8 +404,8 @@ Google 製のプロダクトも、近年は魅力に欠けます。ChatGPT の�
         </item>
         <item>
             <title><![CDATA[2023 年の振り返り]]></title>
-            <link>https://blog.mahata.or/posts/2023-12-22-retrospective</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-12-22-retrospective</guid>
+            <link>https://blog.mahata.org/posts/2023-12-22-retrospective</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-12-22-retrospective</guid>
             <pubDate>Fri, 22 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[今年のまとめを書きます。
 
@@ -533,8 +540,8 @@ X (Twitter) から離れたので、情報の収集には [Feedly](https://feedl
         </item>
         <item>
             <title><![CDATA[近況報告 - ktlog]]></title>
-            <link>https://blog.mahata.or/posts/2023-12-13-yet-another-blog-engine</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-12-13-yet-another-blog-engine</guid>
+            <link>https://blog.mahata.org/posts/2023-12-13-yet-another-blog-engine</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-12-13-yet-another-blog-engine</guid>
             <pubDate>Wed, 13 Dec 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[最近は [ktlog](https://github.com/mahata/ktlog) というサービスを作っています。これは Spring Boot (Kotlin) と React (TypeScript) で作られているブログサービスです。...というのは言い過ぎで、ブログサービスに **なる予定のもの** というのが正しいです。
 
@@ -542,8 +549,8 @@ X (Twitter) から離れたので、情報の収集には [Feedly](https://feedl
         </item>
         <item>
             <title><![CDATA[ChatGPT と Google Bard の比較、または再度の ChatGPT への課金]]></title>
-            <link>https://blog.mahata.or/posts/2023-06-09-chatgpt-again</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-06-09-chatgpt-again</guid>
+            <link>https://blog.mahata.org/posts/2023-06-09-chatgpt-again</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-06-09-chatgpt-again</guid>
             <pubDate>Fri, 09 Jun 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[[5月11日に Google Bard が日本語をサポート](https://japan.googleblog.com/2023/05/bard.html)してから、Google Bard (LaMDA) を利用してきました。ChatGPT の代わりを務めてもらった、ということです。
 
@@ -582,8 +589,8 @@ X (Twitter) から離れたので、情報の収集には [Feedly](https://feedl
         </item>
         <item>
             <title><![CDATA[「体作り」の進捗、または「初めての懸垂」]]></title>
-            <link>https://blog.mahata.or/posts/2023-05-12-kensui</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-05-12-kensui</guid>
+            <link>https://blog.mahata.org/posts/2023-05-12-kensui</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-05-12-kensui</guid>
             <pubDate>Fri, 12 May 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[最近、懸垂ができるようになりました。まだ一回だけだけど。
 
@@ -597,8 +604,8 @@ X (Twitter) から離れたので、情報の収集には [Feedly](https://feedl
         </item>
         <item>
             <title><![CDATA[「〜です」「〜ます」調への転向]]></title>
-            <link>https://blog.mahata.or/posts/2023-04-25-japanese-style</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-04-25-japanese-style</guid>
+            <link>https://blog.mahata.org/posts/2023-04-25-japanese-style</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-04-25-japanese-style</guid>
             <pubDate>Tue, 25 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[唐突ですが「〜だ」「〜である」調での文章をやめて、「〜です」「〜ます」調に転向したいと考えています。少なくともこのブログにおいては。
 
@@ -611,8 +618,8 @@ X (Twitter) から離れたので、情報の収集には [Feedly](https://feedl
         </item>
         <item>
             <title><![CDATA[『ベタープログラマ』の感想]]></title>
-            <link>https://blog.mahata.or/posts/2023-04-20-better-programmer</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-04-20-better-programmer</guid>
+            <link>https://blog.mahata.org/posts/2023-04-20-better-programmer</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-04-20-better-programmer</guid>
             <pubDate>Thu, 20 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[『[ベタープログラマ](https://www.oreilly.co.jp/books/9784873118208/)』を読了しました。 面白い部分もありましたが、同意できない点も多々ある本でした。
 
@@ -628,8 +635,8 @@ X (Twitter) から離れたので、情報の収集には [Feedly](https://feedl
         </item>
         <item>
             <title><![CDATA[『Reactハンズオンラーニング 第2版』の感想]]></title>
-            <link>https://blog.mahata.or/posts/2023-04-10-react-hands-on-learning-2nd</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-04-10-react-hands-on-learning-2nd</guid>
+            <link>https://blog.mahata.org/posts/2023-04-10-react-hands-on-learning-2nd</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-04-10-react-hands-on-learning-2nd</guid>
             <pubDate>Mon, 10 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[『[Reactハンズオンラーニング 第2版](https://www.oreilly.co.jp/books/9784873119380/)』を読了しました。 React 歴の浅い自分には、得るものが多い良い書籍でした。
 
@@ -639,8 +646,8 @@ X (Twitter) から離れたので、情報の収集には [Feedly](https://feedl
         </item>
         <item>
             <title><![CDATA[B'z ファン歴]]></title>
-            <link>https://blog.mahata.or/posts/2023-04-08-bz-fan-history</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-04-08-bz-fan-history</guid>
+            <link>https://blog.mahata.org/posts/2023-04-08-bz-fan-history</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-04-08-bz-fan-history</guid>
             <pubDate>Sat, 08 Apr 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[チームメイトへの自己紹介で「B'z のファンです」と話した。再確認のため、自分の B'z ファン歴を振り返ろうと思う。
 
@@ -664,8 +671,8 @@ B'z はライブがいいな、と思う。ライブに行くために曲を聴�
         </item>
         <item>
             <title><![CDATA[過去に記事を書いた企業ブログ（など）]]></title>
-            <link>https://blog.mahata.or/posts/2023-03-14-company-blogs-where-i-contributed-articles</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-03-14-company-blogs-where-i-contributed-articles</guid>
+            <link>https://blog.mahata.org/posts/2023-03-14-company-blogs-where-i-contributed-articles</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-03-14-company-blogs-where-i-contributed-articles</guid>
             <pubDate>Tue, 14 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[先日 VMware Tanzu Labs の東京オフィスが運営する [Product Run に記事を公開しました](https://medium.com/product-run/%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2-tanzu-labs-%E3%81%AE%E3%82%AA%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%87%E3%82%A3%E3%83%B3%E3%82%B0%E4%BD%93%E9%A8%93-ca0599856234)。久しぶりに企業ブログへ寄稿しました。
 
@@ -686,15 +693,15 @@ B'z はライブがいいな、と思う。ライブに行くために曲を聴�
         </item>
         <item>
             <title><![CDATA[Zenn に技術ブログを書く話]]></title>
-            <link>https://blog.mahata.or/posts/2023-03-13-zenn</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-03-13-zenn</guid>
+            <link>https://blog.mahata.org/posts/2023-03-13-zenn</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-03-13-zenn</guid>
             <pubDate>Mon, 13 Mar 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[最近は多くのソフトウェアエンジニアが Zenn に記事を書いているようです。[僕も使い心地を試す目的で Zenn を使ってみることにしました](https://zenn.dev/mahata)。技術的でない記事は、引き続きこのドメインでホストしようと思っています。]]></description>
         </item>
         <item>
             <title><![CDATA[マラソン大会の思い出]]></title>
-            <link>https://blog.mahata.or/posts/2023-02-16-youthful-days</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-02-16-youthful-days</guid>
+            <link>https://blog.mahata.org/posts/2023-02-16-youthful-days</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-02-16-youthful-days</guid>
             <pubDate>Thu, 16 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[僕は小学生の頃とても太っていた。そして、肥満児は足が遅い。
 
@@ -708,8 +715,8 @@ B'z はライブがいいな、と思う。ライブに行くために曲を聴�
         </item>
         <item>
             <title><![CDATA[Software Engineering at Google: Chapter 3 - Knowledge Sharing]]></title>
-            <link>https://blog.mahata.or/posts/2023-02-14-software-engineering-at-google-chapter3-knowledge-sharing</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-02-14-software-engineering-at-google-chapter3-knowledge-sharing</guid>
+            <link>https://blog.mahata.org/posts/2023-02-14-software-engineering-at-google-chapter3-knowledge-sharing</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-02-14-software-engineering-at-google-chapter3-knowledge-sharing</guid>
             <pubDate>Mon, 13 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[『[Software Engineering at Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/)』の第三章「Knowledge Sharing」を読んだ。以下は感想文である。
 
@@ -731,8 +738,8 @@ B'z はライブがいいな、と思う。ライブに行くために曲を聴�
         </item>
         <item>
             <title><![CDATA[Software Engineering at Google: Chapter 2 - How To Work Well On Teams]]></title>
-            <link>https://blog.mahata.or/posts/2023-02-10-software-engineering-at-google-chapter2-how-to-work-well-on-teams</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-02-10-software-engineering-at-google-chapter2-how-to-work-well-on-teams</guid>
+            <link>https://blog.mahata.org/posts/2023-02-10-software-engineering-at-google-chapter2-how-to-work-well-on-teams</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-02-10-software-engineering-at-google-chapter2-how-to-work-well-on-teams</guid>
             <pubDate>Fri, 10 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[この記事は『[Software Engineering at Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/)』の第二章「How To Work Well On Teams」を読んだ感想である。
 
@@ -784,8 +791,8 @@ Linus Torvalds や Guido Van Rossum などの偉大なプログラマーが「�
         </item>
         <item>
             <title><![CDATA[Software Engineering at Google: Chapter 1 - What Is Software Engineering]]></title>
-            <link>https://blog.mahata.or/posts/2023-02-06-software-engineering-at-google-chapter1-what-is-software-engineering</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-02-06-software-engineering-at-google-chapter1-what-is-software-engineering</guid>
+            <link>https://blog.mahata.org/posts/2023-02-06-software-engineering-at-google-chapter1-what-is-software-engineering</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-02-06-software-engineering-at-google-chapter1-what-is-software-engineering</guid>
             <pubDate>Mon, 06 Feb 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[『[Software Engineering at Google](https://learning.oreilly.com/library/view/software-engineering-at/9781492082781/)』の第一章「What Is Software Engineering」を読んだ感想をメモしていく。
 
@@ -821,8 +828,8 @@ Linus Torvalds や Guido Van Rossum などの偉大なプログラマーが「�
         </item>
         <item>
             <title><![CDATA[外部ドメインでホストされているリソースをみだりに読み込むべきではないという話]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-27-dont-use-libraries-hosted-elsewhere</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-27-dont-use-libraries-hosted-elsewhere</guid>
+            <link>https://blog.mahata.org/posts/2023-01-27-dont-use-libraries-hosted-elsewhere</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-27-dont-use-libraries-hosted-elsewhere</guid>
             <pubDate>Fri, 27 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[[IIJ Engineering Blog の「その証明書、安全ですか？」という記事](https://eng-blog.iij.ad.jp/archives/17668)を読んだ。小難しい話をユーモアをまじえて解説する、良い記事だと思った。
 
@@ -834,8 +841,8 @@ Linus Torvalds や Guido Van Rossum などの偉大なプログラマーが「�
         </item>
         <item>
             <title><![CDATA[Don't Lead by example の日本語訳]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-24-dont-lead-by-example</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-24-dont-lead-by-example</guid>
+            <link>https://blog.mahata.org/posts/2023-01-24-dont-lead-by-example</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-24-dont-lead-by-example</guid>
             <pubDate>Tue, 24 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[この記事は Dropbox で Principal Engineer をされていた James Cowling さんによる [Don’t lead by example](https://blogs.dropbox.com/tech/2019/02/dont-lead-by-example/) というページの翻訳です。この記事が最初にリリースされたとき、強く感銘を受けたことを覚えています。ふと個人的なメモを漁っていたところ、この記事を過去に翻訳したことを思い出し、ここで公開しようと思いました。
 
@@ -880,8 +887,8 @@ Linus Torvalds や Guido Van Rossum などの偉大なプログラマーが「�
         </item>
         <item>
             <title><![CDATA[『プログラミングTypeScript』 第四章 - final 修飾子のエミュレート]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-23-programming-typescript-chapter5-emulate-final</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-23-programming-typescript-chapter5-emulate-final</guid>
+            <link>https://blog.mahata.org/posts/2023-01-23-programming-typescript-chapter5-emulate-final</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-23-programming-typescript-chapter5-emulate-final</guid>
             <pubDate>Mon, 23 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[『[プログラミングTypeScript](https://www.oreilly.co.jp/books/9784873119045/)』の第五章では、Java などのプログラミング言語における `final` キーワードを TypeScript で実現するアイディアについて紹介されている。面白いと思った。
 
@@ -918,8 +925,8 @@ const mammal = Mammal.create();
         </item>
         <item>
             <title><![CDATA[RSS リーダーへの回帰]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-20-back-to-rss-reader</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-20-back-to-rss-reader</guid>
+            <link>https://blog.mahata.org/posts/2023-01-20-back-to-rss-reader</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-20-back-to-rss-reader</guid>
             <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[[2022 年の振り返り記事](/posts/2022-12-23-retrospective)で Twitter 離れしたことを書いた。
 
@@ -937,8 +944,8 @@ Twitter を使わずに同じ体験をするために RSS リーダーを使う�
         </item>
         <item>
             <title><![CDATA[MarkText から IntelliJ への移行]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-19-marktext-to-intellij</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-19-marktext-to-intellij</guid>
+            <link>https://blog.mahata.org/posts/2023-01-19-marktext-to-intellij</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-19-marktext-to-intellij</guid>
             <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[[2022 年の振り返り記事](/posts/2022-12-23-retrospective)でマークダウンエディタとして [MarkText](https://marktext.app/) を使っていると書いた。
 
@@ -956,8 +963,8 @@ Twitter を使わずに同じ体験をするために RSS リーダーを使う�
         </item>
         <item>
             <title><![CDATA[GitHub でスターをつけたプロジェクトを定期的にリマインドする話]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-18-github-actions-for-github-stars-reminder</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-18-github-actions-for-github-stars-reminder</guid>
+            <link>https://blog.mahata.org/posts/2023-01-18-github-actions-for-github-stars-reminder</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-18-github-actions-for-github-stars-reminder</guid>
             <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[GitHub プロジェクトにスターをつけるとき、だいたいはブックマーク目的である。しかし、この運用には根本的な問題がある。スターをつけたプロジェクトを忘れてしまうのだ。
 
@@ -969,8 +976,8 @@ Twitter を使わずに同じ体験をするために RSS リーダーを使う�
         </item>
         <item>
             <title><![CDATA[定期的な処理を GitHub Actions で行う話]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-17-github-actions-as-a-cron-server</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-17-github-actions-as-a-cron-server</guid>
+            <link>https://blog.mahata.org/posts/2023-01-17-github-actions-as-a-cron-server</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-17-github-actions-as-a-cron-server</guid>
             <pubDate>Tue, 17 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[何かの処理を定期的に実行したい、そんなこともあるでしょう。プログラマであれば。
 
@@ -991,8 +998,8 @@ Twitter を使わずに同じ体験をするために RSS リーダーを使う�
         </item>
         <item>
             <title><![CDATA[『プログラミングTypeScript』 第四章 - is メソッドの実装]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-16-programming-typescript-chapter4-is-method</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-16-programming-typescript-chapter4-is-method</guid>
+            <link>https://blog.mahata.org/posts/2023-01-16-programming-typescript-chapter4-is-method</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-16-programming-typescript-chapter4-is-method</guid>
             <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[『[プログラミングTypeScript](https://www.oreilly.co.jp/books/9784873119045/)』の第四章の練習問題に次のようなものがある。
 
@@ -1050,8 +1057,8 @@ function is<T>(first: T, ...rest: [T, ...T[]]): boolean {
         </item>
         <item>
             <title><![CDATA[『プログラミングTypeScript』 第四章 - ジェネレーターとイテレーター]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-13-programming-typescript-chapter4-generator-iterator</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-13-programming-typescript-chapter4-generator-iterator</guid>
+            <link>https://blog.mahata.org/posts/2023-01-13-programming-typescript-chapter4-generator-iterator</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-13-programming-typescript-chapter4-generator-iterator</guid>
             <pubDate>Fri, 13 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[『[プログラミングTypeScript](https://www.oreilly.co.jp/books/9784873119045/)』の第四章ではジェネレーターおよびイテレーターに関するセクションがある。そこではフィボナッチ数を生成するジェネレーターを返す関数 (ジェネレーター関数) が例示されている。
 
@@ -1113,8 +1120,8 @@ for (let i = 0; i < 100; i++) {
         </item>
         <item>
             <title><![CDATA[SadServers - "Saskatoon" の解説]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-11-sadservers2-saskatoon</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-11-sadservers2-saskatoon</guid>
+            <link>https://blog.mahata.org/posts/2023-01-11-sadservers2-saskatoon</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-11-sadservers2-saskatoon</guid>
             <pubDate>Wed, 11 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[[前回](/posts/2023-01-10-sadservers1-saint-john)に続いて SadServers の ["Saskatoon": counting IPs.](https://sadservers.com/newserver/saskatoon#) を解いてみよう。概要は次の通りだ。
 
@@ -1173,15 +1180,15 @@ $ cat /home/admin/access.log | cut -d ' ' -f 1 | sort | uniq -c | sort | tail -n
         </item>
         <item>
             <title><![CDATA[SadServers - "Saint John" の解説]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-10-sadservers1-saint-john</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-10-sadservers1-saint-john</guid>
+            <link>https://blog.mahata.org/posts/2023-01-10-sadservers1-saint-john</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-10-sadservers1-saint-john</guid>
             <pubDate>Tue, 10 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[[こちらの記事の内容は Zenn に移しました](https://zenn.dev/mahata/articles/f3b758c96fe698) (この記事そのものも、後で消すかもしれないです)。]]></description>
         </item>
         <item>
             <title><![CDATA[ブログの読み返しが好きな話]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-05-read-my-own-blog</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-05-read-my-own-blog</guid>
+            <link>https://blog.mahata.org/posts/2023-01-05-read-my-own-blog</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-05-read-my-own-blog</guid>
             <pubDate>Thu, 05 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[いかにもナルシストっぽい発言だけど、僕は自分の過去のブログ記事を読み返すのが好きだ。[以前もそのような趣旨の記事を書いたことがある](https://mahata.gitlab.io/post/2021-04-01-read-your-own-blog/)。
 
@@ -1202,8 +1209,8 @@ $ npx sitemap < urls.txt > public/sitemap.xml
         </item>
         <item>
             <title><![CDATA[お酒のない生活]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-04-no-alcohol-life</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-04-no-alcohol-life</guid>
+            <link>https://blog.mahata.org/posts/2023-01-04-no-alcohol-life</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-04-no-alcohol-life</guid>
             <pubDate>Wed, 04 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[最近、お酒を飲まなくなった。
 
@@ -1213,8 +1220,8 @@ $ npx sitemap < urls.txt > public/sitemap.xml
         </item>
         <item>
             <title><![CDATA[アウトプットのためのインプット]]></title>
-            <link>https://blog.mahata.or/posts/2023-01-03-input-for-output</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2023-01-03-input-for-output</guid>
+            <link>https://blog.mahata.org/posts/2023-01-03-input-for-output</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2023-01-03-input-for-output</guid>
             <pubDate>Tue, 03 Jan 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[単に「意識が変わってきた」という話なのだが、最近はアウトプットを意識してインプットをするようにしている。たとえば本を読むときは、ブログに感想を書く前提で読んでいる。
 
@@ -1224,8 +1231,8 @@ $ npx sitemap < urls.txt > public/sitemap.xml
         </item>
         <item>
             <title><![CDATA[2022 年の振り返り]]></title>
-            <link>https://blog.mahata.or/posts/2022-12-23-retrospective</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2022-12-23-retrospective</guid>
+            <link>https://blog.mahata.org/posts/2022-12-23-retrospective</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2022-12-23-retrospective</guid>
             <pubDate>Fri, 23 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[[去年に続き](https://mahata.gitlab.io/post/2021-12-25-retrospective/)、今年の出来事を振り返ってみようと思う。
 
@@ -1392,8 +1399,8 @@ AirPods Pro は初代も持っていて満足していたけど、日常的に�
         </item>
         <item>
             <title><![CDATA[大企業内の小規模チームでのお仕事]]></title>
-            <link>https://blog.mahata.or/posts/2022-12-01-startup-like-big-tech</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2022-12-01-startup-like-big-tech</guid>
+            <link>https://blog.mahata.org/posts/2022-12-01-startup-like-big-tech</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2022-12-01-startup-like-big-tech</guid>
             <pubDate>Thu, 01 Dec 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[今年の中旬に、いわゆる外資系大企業に転職した。そこからずっと、楽しく仕事ができている。
 
@@ -1405,8 +1412,8 @@ AirPods Pro は初代も持っていて満足していたけど、日常的に�
         </item>
         <item>
             <title><![CDATA[ブログの引っ越し - うん、「また」なんだ。済まない。]]></title>
-            <link>https://blog.mahata.or/posts/2022-11-30-yet-another-blog-migration</link>
-            <guid isPermaLink="false">https://blog.mahata.or/posts/2022-11-30-yet-another-blog-migration</guid>
+            <link>https://blog.mahata.org/posts/2022-11-30-yet-another-blog-migration</link>
+            <guid isPermaLink="false">https://blog.mahata.org/posts/2022-11-30-yet-another-blog-migration</guid>
             <pubDate>Wed, 30 Nov 2022 00:00:00 GMT</pubDate>
             <description><![CDATA[またブログの引っ越しをした。
 
