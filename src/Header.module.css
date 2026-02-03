@@ -10,4 +10,12 @@
   height: 128px;
   border-radius: 50%;
   object-fit: cover;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
 }
