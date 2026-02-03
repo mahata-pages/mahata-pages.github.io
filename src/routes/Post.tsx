@@ -1,9 +1,10 @@
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { Suspense, use, useMemo } from "react";
+import { ArrowLeft } from "react-feather";
 import { Link, useParams } from "react-router-dom";
 import { remark } from "remark";
-import html from "remark-html";
 import frontmatter from "remark-frontmatter";
-import { ErrorBoundary } from "@/components/ErrorBoundary";
+import html from "remark-html";
 import styles from "./Post.module.css";
 
 type PostProps = Readonly<{
@@ -58,7 +59,14 @@ function PostContent({ baseDir, slug }: PostProps & { slug: string }) {
     }
   }, [markdown]);
 
-  return <article className={styles.article} dangerouslySetInnerHTML={{ __html: renderedHtml }} />;
+  return (
+    <div className={styles.container}>
+      <Link to="/" className={styles.backButton}>
+        <ArrowLeft size={20} />
+      </Link>
+      <article className={styles.article} dangerouslySetInnerHTML={{ __html: renderedHtml }} />
+    </div>
+  );
 }
 
 function Loading() {

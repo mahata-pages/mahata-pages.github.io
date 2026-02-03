@@ -1,9 +1,28 @@
-.article {
+.container {
   max-width: 65ch;
   margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 0.5rem 0;
+  margin: 1rem 0 1.5rem 0;
+  color: #4a9eff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.backButton:hover {
+  color: #71b5ff;
+  text-decoration: underline;
+}
+
+.article {
   font-size: 1.1rem;
   line-height: 1.8;
-  padding: 0 1rem;
   color: #e6e6e6;
 }
 
