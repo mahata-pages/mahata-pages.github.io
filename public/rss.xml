@@ -4,7 +4,7 @@
         <title>mahata.or blog</title>
         <link>https://blog.mahata.org</link>
         <description>A blog about software engineering, programming, and life</description>
-        <lastBuildDate>Thu, 29 Jan 2026 13:38:47 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 03 Feb 2026 14:21:47 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -14,7 +14,11 @@
             <link>https://blog.mahata.org/posts/2026-01-29-blog-in-2026</link>
             <guid isPermaLink="false">https://blog.mahata.org/posts/2026-01-29-blog-in-2026</guid>
             <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[ブログを、また、また自作しました。]]></description>
+            <description><![CDATA[かつて[Vercelogというブログ](https://github.com/mahata/vercelog)を作って、その名の通りVercel上でホスティングしていたことがありました。このときは、Next.jsを勉強したいモチベーションから作ったのですが、結局のところNext.jsを深く理解することはできず、クリティカルな脆弱性があるときだけアップデートをするような運用になっていました。
+
+ちょっと気持ちを変えて、Next.jsは置いておき、自分に馴染みのある素のReactをGitHub Pages上でホスティングすることにしました。サーバーサイドがないことで気楽に運用できるのではないかと考えています。今の立場ではNext.jsを深く学ぶ必要性もあまり感じていないということもあります。
+
+これを機会に、もう少し頻繁に記事を書いていこうと思います。]]></description>
         </item>
         <item>
             <title><![CDATA[2025 年の振り返り]]></title>
