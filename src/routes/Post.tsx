@@ -61,7 +61,7 @@ function PostContent({ baseDir, slug }: PostProps & { slug: string }) {
 
   return (
     <div className={styles.container}>
-      <Link to="/" className={styles.backButton}>
+      <Link to="/" className={styles.backButton} aria-label="Back to home">
         <ArrowLeft size={20} />
       </Link>
       <article className={styles.article} dangerouslySetInnerHTML={{ __html: renderedHtml }} />
