@@ -6,3 +6,6 @@ pnpm install
 pnpm exec playwright install-deps chromium
 
 npm i -g @github/copilot @antfu/ni
+
+cp scripts/pre-commit .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
