@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "pnpm prebuild && vite",
-    "prebuild": "tsx scripts/generate-rss.ts",
+    "prebuild": "tsx scripts/generate-rss.ts && tsx scripts/generate-sitemap.ts",
     "build": "tsc -b && vite build",
     "lint": "oxlint .",
     "fmt": "oxfmt .",
