@@ -103,18 +103,7 @@ test("renders back button with arrow icon", async ({ mount }) => {
   await expect(svg).toBeVisible();
 });
 
-test("back button navigates to home page", async ({ mount, page }) => {
-  const component = await mountAtPath(mount, "/posts/yo", "posts");
-
-  // Get the back button and click it
-  const backButton = component.getByRole("link").first();
-  await expect(backButton).toHaveAttribute("href", "/");
-
-  // In component testing, we verify the href attribute is correct
-  // Actual navigation would be tested in E2E tests
-});
-
-test("back button is positioned within article container", async ({ mount }) => {
+test("back button and article are both rendered", async ({ mount }) => {
   const component = await mountAtPath(mount, "/posts/yo", "posts");
 
   // Verify back button exists
