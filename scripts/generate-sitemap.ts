@@ -1,9 +1,6 @@
 import { readdir, readFile, writeFile } from "fs/promises";
 import { join } from "path";
-import {
-  extractFrontMatter,
-  isValidFrontMatter,
-} from "../src/utils/frontMatter.js";
+import { extractFrontMatter, isValidFrontMatter } from "../src/utils/frontMatter.js";
 
 interface SitemapEntry {
   loc: string;
