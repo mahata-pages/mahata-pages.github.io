@@ -1,7 +1,7 @@
-import { test, expect } from "@playwright/experimental-ct-react";
-import type { ComponentFixtures } from "@playwright/experimental-ct-react";
-import { MemoryRouter, Routes, Route } from "react-router-dom";
 import Post from "@/routes/Post";
+import type { ComponentFixtures } from "@playwright/experimental-ct-react";
+import { expect, test } from "@playwright/experimental-ct-react";
+import { MemoryRouter, Route, Routes } from "react-router-dom";
 
 const mountAtPath = async (
   mount: ComponentFixtures["mount"],
@@ -88,4 +88,33 @@ test("handles markdown with potentially malicious HTML content", async ({ mount 
   const imgCount = await article.locator("img").count();
   expect(scriptCount).toBe(0);
   expect(imgCount).toBe(0);
+});
+
+test("renders back button with arrow icon", async ({ mount }) => {
+  const component = await mountAtPath(mount, "/posts/yo", "posts");
+
+  // Verify back button is present
+  const backButton = component.getByRole("link").first();
+  await expect(backButton).toBeVisible();
+  await expect(backButton).toHaveAttribute("href", "/");
+
+  // Verify it contains an SVG icon (ArrowLeft from react-feather)
+  const svg = backButton.locator("svg");
+  await expect(svg).toBeVisible();
+});
+
+test("back button and article are both rendered", async ({ mount }) => {
+  const component = await mountAtPath(mount, "/posts/yo", "posts");
+
+  // Verify back button exists
+  const backButton = component.getByRole("link").first();
+  await expect(backButton).toBeVisible();
+  await expect(backButton).toHaveAttribute("href", "/");
+
+  // Verify the article also exists
+  const article = component.getByRole("article");
+  await expect(article).toBeVisible();
+
+  // Verify both back button and article are rendered (proving they're in the same container)
+  await expect(component).toContainText("Hey");
 });
